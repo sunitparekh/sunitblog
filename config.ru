@@ -38,7 +38,9 @@ map '/' do
   SoupCMSCore.configure do |config|
     config.application_strategy = SoupCMS::Common::Strategy::Application::SingleApp
   end
-  run SoupCMSRackApp.new
+  app = SoupCMSRackApp.new
+  app.set_redirect('http://blog.sunitparekh.in/','http://blog.sunitparekh.in/home')
+  run app
 end
 
 
