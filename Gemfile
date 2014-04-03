@@ -6,8 +6,8 @@ gem 'soupcms-cli', github: 'soupcms/soupcms-cli'
 
 gem 'soupcms-common', github: 'soupcms/soupcms-common'
 
-gem 'soupcms-core', path: '../soupcms/soupcms-core'
-# gem 'soupcms-core', github: 'soupcms/soupcms-core'
+# gem 'soupcms-core', path: '../soupcms/soupcms-core'
+gem 'soupcms-core', github: 'soupcms/soupcms-core'
 
 # gem 'soupcms-api', path: '../soupcms/soupcms-api'
 gem 'soupcms-api', github: 'soupcms/soupcms-api'
