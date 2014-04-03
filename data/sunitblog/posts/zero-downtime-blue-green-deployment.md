@@ -23,14 +23,17 @@ Also keeping full in-active stack didn't sound good idea. Now we had to made som
 And with above changes the deployment steps are,
 
 ![Pre deployment state](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/1-state-before-deployment.png "pre deployment state")
+{: .center}
 
 **Step 1:** Change heartbeat of the green stack to state 'standby'. This will remove green stack from LIVE load-balancer pool and no new request send to green stack.
 
 ![Change heartbeat of the green stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/2-green-standby.png "Change heartbeat of the green stack")
+{: .center}
 
 **Step 2:** Deploy latest version of the application to green stack. Wait sometime to complete the inflight request on green stack before deployment.
 
 ![Deploy latest version to green stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/3-green-v2.png "Deploy latest version to green stack")
+{: .center}
 
 **Step 3:** Sanity test green stack using standby load-balancer. Ideally automated, this will make sure deployment is good.
 
