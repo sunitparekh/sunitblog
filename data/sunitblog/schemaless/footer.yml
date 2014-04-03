@@ -1,0 +1,20 @@
+---
+  name: footer
+
+  copyright: "Copyright &copy; 2014"    # update or remove
+  links: 
+    - 
+      label: About
+      link:
+        url: about
+    - 
+      label: Contact Us
+      link:
+        url: contact-us
+      font_icon: fa fa-envelope-o
+    
+    -
+      label: Blog
+      link:
+        url: blog-latest
+    
