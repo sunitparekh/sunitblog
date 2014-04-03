@@ -8,8 +8,8 @@ require 'soupcms/api'
 SoupCMS::Common::Strategy::Application::SingleApp.configure do |app|
   app.app_name = "sunitblog"
   app.display_name = "Sunit Parekh's blog space sharing technical & agile experience"
-  app.soupcms_api_url = 'http://localhost:9292/api'
-  app.app_base_url = 'http://localhost:9292/'
+  app.soupcms_api_url = 'http://sunitblog.herokuapp.com/api'
+  app.app_base_url = 'http://sunitblog.herokuapp.com/'
 end
 
 map '/api' do
