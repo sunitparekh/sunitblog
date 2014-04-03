@@ -29,7 +29,7 @@
             -
               type: inline
               data:
-                title: sUnit blog space
+                title: sUnit technical blog space
                 subtitle: Sunit Parekh's blog space sharing technical & agile experience
                 image:
                   source: cloudinary

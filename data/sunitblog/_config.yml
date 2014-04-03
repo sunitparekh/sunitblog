@@ -1,6 +1,6 @@
 ---
 name: sunitblog
-display_name: sUnit blog space
+display_name: sUnit technical blog space
 description: Sunit Parekh's blog space sharing technical & agile experience
 blog: true
 blog_layout: right-sidebar

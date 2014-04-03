@@ -40,18 +40,22 @@ And with above changes the deployment steps are,
 **Step 4:** Revert heartbeat of the green stack to state 'live'. This will put the green stack back to LIVE load-balancer pool.
 
 ![Revert heartbeat of the green stack to state 'live'](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/4-green-v2-live.png "Revert heartbeat of the green stack to state 'live'")
+{: .center}
 
 If you notice the blue stack running on v1 and green stack running on v2. And both the stacks are connected to same database. Which means v2 codebase should work with old data models. And if there is any database migration should be carried only after all stack upgraded to latest version.
 
 **Step 5:** Repeat above steps for blue stack,
 
 ![Change heartbeat of the blue stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/5-blue-standby.png "Change heartbeat of the blue stack")
+{: .center}
 
 ![Deploy latest version to blue stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/6-blue-v2.png "Deploy latest version to blue stack")
+{: .center}
 
 And finally v2 deployed fully,
 
 ![latest version deployed on all stacks](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/7-blue-v2-live.png "latest version deployed on all stacks")
+{: .center}
 
 **Step 6:** Optional, run database migration (independent of the deployment)
 
