@@ -3,7 +3,7 @@
 
   logo:
     font_icon: fa fa-magic
-    text: "sUnit blog space"
+    text: "sUnit blog"
     link:
       url: home
 
@@ -12,18 +12,14 @@
     
     left:
       -
-        label: Latest
+        label: Latest posts
         link:
           url: blog-latest
     
 
     right:
       -
-        label: Contact Us
-        link:
-          url: contact-us
-        font_icon: fa fa-envelope-o
-      -
         label: About
         link:
           url: about
+        font_icon: fa fa-user
