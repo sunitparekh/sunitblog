@@ -3,6 +3,7 @@
 tags: [nfr, software development]
 title: Cross functional requirements
 description: "It is always been difficult to identify stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception (2-3 weeks of project kick-off/initiation phase). Here is the technique to do that in short 2-3 weeks project inception."
+publish_datetime: 2013-05-04T00:00:07.0Z
 ---
 
 It's always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.

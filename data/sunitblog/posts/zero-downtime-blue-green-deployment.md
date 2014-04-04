@@ -2,7 +2,7 @@
 # blog post attributes in front matter format
 tags: [devops, continuous delivery]
 title: Zero downtime using blue-green deployment strategy
-
+publish_datetime: 2013-10-23T01:00:01.0Z
 ---
 Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.
 
@@ -22,39 +22,39 @@ Also keeping full in-active stack didn't sound good idea. Now we had to made som
 
 And with above changes the deployment steps are,
 
-![Pre deployment state](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/1-state-before-deployment.png "pre deployment state")
+![Pre deployment state](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/1-state-before-deployment.svg)
 {: .center}
 
 **Step 1:** Change heartbeat of the green stack to state 'standby'. This will remove green stack from LIVE load-balancer pool and no new request send to green stack.
 
-![Change heartbeat of the green stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/2-green-standby.png "Change heartbeat of the green stack")
+![Change heartbeat of the green stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/2-green-standby.svg)
 {: .center}
 
 **Step 2:** Deploy latest version of the application to green stack. Wait sometime to complete the inflight request on green stack before deployment.
 
-![Deploy latest version to green stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/3-green-v2.png "Deploy latest version to green stack")
+![Deploy latest version to green stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/3-green-v2.svg "Deploy latest version to green stack")
 {: .center}
 
 **Step 3:** Sanity test green stack using standby load-balancer. Ideally automated, this will make sure deployment is good.
 
 **Step 4:** Revert heartbeat of the green stack to state 'live'. This will put the green stack back to LIVE load-balancer pool.
 
-![Revert heartbeat of the green stack to state 'live'](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/4-green-v2-live.png "Revert heartbeat of the green stack to state 'live'")
+![Revert heartbeat of the green stack to state 'live'](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/4-green-v2-live.svg "Revert heartbeat of the green stack to state 'live'")
 {: .center}
 
 If you notice the blue stack running on v1 and green stack running on v2. And both the stacks are connected to same database. Which means v2 codebase should work with old data models. And if there is any database migration should be carried only after all stack upgraded to latest version.
 
 **Step 5:** Repeat above steps for blue stack,
 
-![Change heartbeat of the blue stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/5-blue-standby.png "Change heartbeat of the blue stack")
+![Change heartbeat of the blue stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/5-blue-standby.svg "Change heartbeat of the blue stack")
 {: .center}
 
-![Deploy latest version to blue stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/6-blue-v2.png "Deploy latest version to blue stack")
+![Deploy latest version to blue stack](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/6-blue-v2.svg "Deploy latest version to blue stack")
 {: .center}
 
 And finally v2 deployed fully,
 
-![latest version deployed on all stacks](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/7-blue-v2-live.png "latest version deployed on all stacks")
+![latest version deployed on all stacks](/assets/sunitblog/posts/images/zero-downtime-blue-green-deployment/7-blue-v2-live.svg "latest version deployed on all stacks")
 {: .center}
 
 **Step 6:** Optional, run database migration (independent of the deployment)

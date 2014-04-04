@@ -3,7 +3,7 @@
 tags: [architecture pattern, software development]
 title: Building highly scalable and performance application using non-blocking architecture
 description: Article shows the modern way of building websites using non-blocking architecture pattern. Why this style of architecture is beneficial and what are the frameworks available to implement.
-
+publish_datetime: 2013-05-07T01:00:01.0Z
 ---
 
 I have been working on web application development since last 12+ years and had privileged to work on more than 20+ different project. Now days the expectations from web apps are totally different than it was few years back. End users are provided with rich content on single page (Amazon, CNN, ...). On a single page, lots of data needs to be mashed up and data may come from different sources.
@@ -13,7 +13,7 @@ I have been working on web application development since last 12+ years and had 
 
 We know how to put together the N-tier architecture.
 
-![Service oriented architecture](/assets/sunitblog/posts/images/non-blocking-architecture-pattern/2-service-oriented-architecture.jpg)
+![Service oriented architecture](/assets/sunitblog/posts/images/non-blocking-architecture-pattern/2-service-oriented-architecture.svg)
 {: .center}
 
 And the request workflow will be as following,
