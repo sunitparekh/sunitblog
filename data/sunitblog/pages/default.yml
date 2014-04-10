@@ -29,8 +29,8 @@
             -
               type: inline
               data:
-                title: sUnit technical blog space
-                subtitle: Sunit Parekh's blog space sharing technical & agile experience
+                title: sUnit blog
+                sub_headline: Sunit Parekh's blog space sharing technical & agile experience
                 image:
                   source: cloudinary
                   base_url: http://res.cloudinary.com/sunitparekh/image/upload
