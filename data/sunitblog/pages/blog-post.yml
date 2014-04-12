@@ -2,7 +2,21 @@
   meta: 
     model: posts
   areas: 
-    - 
+    -
+      name: header
+      modules:
+        -
+          recipes:
+            -
+              type: soupcms-api
+              model: schemaless
+              match:
+                name: navigation
+              return: navigation
+          template:
+            type: slim
+            name: bootstrap/navigation
+    -
       name: sidebar
       modules: 
         - 
