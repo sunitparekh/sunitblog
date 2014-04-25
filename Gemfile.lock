@@ -8,9 +8,9 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-cli.git
-  revision: 57b4a8e677ae0d65306a496a91d3f7179a82d456
+  revision: 0fe749476f2c1824de24140a549a6ccd8708db9c
   specs:
-    soupcms-cli (0.5.2)
+    soupcms-cli (0.5.3)
       bson_ext (~> 1.10)
       mongo (~> 1.10)
       thor (~> 0.19)
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-core.git
-  revision: 4560e958d233fb9a78451b9595d2184cadb96fc3
+  revision: 57289382c7f56518434769733fd067a07725ed0a
   specs:
     soupcms-core (0.5.0)
       bootstrap-sass
@@ -43,17 +43,17 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    bootstrap-sass (3.1.1.0)
+    bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     bson (1.10.0)
     bson_ext (1.10.0)
       bson (~> 1.10.0)
     coderay (1.1.0)
     daemon_controller (1.2.0)
-    dotenv (0.10.0)
-    foreman (0.63.0)
-      dotenv (>= 0.7)
-      thor (>= 0.13.6)
+    dotenv (0.7.0)
+    foreman (0.66.0)
+      dotenv (~> 0.7.0)
+      thor (~> 0.19.1)
     hike (1.2.3)
     kramdown (1.3.3)
     mini_portile (0.5.3)
@@ -65,11 +65,11 @@ GEM
       daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
-    puma (2.8.1)
+    puma (2.8.2)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
-    rake (10.2.2)
-    sass (3.3.4)
+    rake (10.3.1)
+    sass (3.3.5)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)

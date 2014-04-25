@@ -18,6 +18,7 @@ SoupCMS::Common::Strategy::Application::SingleApp.configure do |app|
 
 end
 
+
 map '/api' do
   SoupCMSApi.configure do |config|
     config.application_strategy = SoupCMS::Common::Strategy::Application::SingleApp
