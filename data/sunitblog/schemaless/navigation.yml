@@ -2,7 +2,7 @@
   doc_id: navigation
 
   logo:
-    font_icon: fa fa-magic
+    font_icon: fa fa-home
     text: "sUnit blog"
     link:
       url: home
