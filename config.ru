@@ -6,8 +6,8 @@ require 'soupcms/api'
 
 
 SoupCMS::Common::Strategy::Application::SingleApp.configure do |app|
-  app.app_name = "sunitblog"
-  app.display_name = "Sunit Parekh's blog space sharing technical & agile experience"
+  app.app_name = 'sunitblog'
+  app.display_name = 'sUnit Blog'
   if ENV['RACK_ENV'] == 'production'
     app.soupcms_api_url = 'http://blog.sunitparekh.in/api'
     app.app_base_url = 'http://blog.sunitparekh.in/'
