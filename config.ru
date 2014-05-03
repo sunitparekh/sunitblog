@@ -9,8 +9,9 @@ SoupCMS::Common::Strategy::Application::SingleApp.configure do |app|
   app.app_name = 'sunitblog'
   app.display_name = 'sUnit Blog'
   if ENV['RACK_ENV'] == 'production'
-    app.soupcms_api_url = 'http://blog.sunitparekh.in/api'
-    app.app_base_url = 'http://blog.sunitparekh.in/'
+    prod_host = ENV['HOST_NAME'] || 'blog.sunitparekh.in'
+    app.soupcms_api_url = "http://#{prod_host}/api"
+    app.app_base_url = "http://#{prod_host}/"
   else
     app.soupcms_api_url = 'http://localhost:9292/api'
     app.app_base_url = 'http://localhost:9292/'
