@@ -4,7 +4,6 @@
 # bundle exec puma -C puma.rb
 
 root = "#{Dir.getwd}"
-ENV['HOST_NAME'] = 'me.sunitparekh.in'
 environment 'production'
 daemonize true
 pidfile "#{root}/tmp/puma/pid"
