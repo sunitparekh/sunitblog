@@ -4,6 +4,7 @@
 # bundle exec puma -C puma.rb
 
 root = "#{Dir.getwd}"
+environment 'production'
 daemonize true
 pidfile "#{root}/tmp/puma/pid"
 state_path "#{root}/tmp/puma/state"
