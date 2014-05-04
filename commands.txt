@@ -23,6 +23,18 @@ sudo nano /etc/nginx/sites-available/me.sunitparekh.in
 
 
 
+watch -n 5 free -m
+
+
+Every 5.0s: free -m             Sat May  3 11:25:35 2014
+
+             total       used       free     shared    buffers     cached
+Mem:           994        907         86          0         70        584
+-/+ buffers/cache:        252        741
+Swap:            0          0          0
+
+
+
 
 
 
