@@ -49,6 +49,7 @@ map '/' do
   end
   app = SoupCMSRackApp.new
   app.set_redirect('http://blog.sunitparekh.in/','http://blog.sunitparekh.in/home')
+  app.set_redirect('http://me.sunitparekh.in/','http://me.sunitparekh.in/home')
   run app
 end
 
