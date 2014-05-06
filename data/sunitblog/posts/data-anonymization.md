@@ -1,5 +1,4 @@
 ---
-# blog post attributes in front matter format
 tags: [data-anonymization, testing]
 title: Data Anonymization, need for every site in production
 publish_datetime: 2012-09-04T00:00:07.0Z

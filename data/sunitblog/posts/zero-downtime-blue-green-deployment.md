@@ -1,5 +1,4 @@
 ---
-# blog post attributes in front matter format
 tags: [devops, continuous delivery]
 title: Zero downtime using blue-green deployment strategy
 publish_datetime: 2013-10-23T01:00:01.0Z

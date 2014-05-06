@@ -1,5 +1,4 @@
 ---
-# blog post attributes in front matter format
 tags: [envisioning, agile]
 title: Project envisioning exercise - Product Map
 publish_datetime: 2012-04-29T00:00:07.0Z
@@ -15,7 +14,7 @@ For understanding product and its family and how they differ from each other, we
 **Participants**: SMEs and Business Stakeholders
 **Preparation**: Create large board with matrix/grid having products on rows and comparison factors as columns. Write down all the known products and comparison factors on stickies to save time.
 
-### How to execute:
+### How to execute
 
 1. First steps to ask business to complete the product list, and then group them based similarities
 2. Rearrange product list, keep the most popular product family and product on top
@@ -27,11 +26,11 @@ For understanding product and its family and how they differ from each other, we
 
 ![product map](/assets/sunitblog/posts/images/product-map/product-map.jpg)
 
-### Variation:
+### Variation
 
 Can be used for technical debt matrix e.g. put different modules/areas of codebase as rows, technical parameter such as complexity, test coverage, clean code etc as columns and start populating matrix. Can be very useful for creating visuals for legacy codebase.
 
-### How we did it?
+### Toolkit
 
 - In our case we put products as rows grouped together with same product family (yellow stickies in picture)  and different processes steps followed for the product as columns (pink and blue stickies in picture - blue stickies are sub steps). .
 - We used different colors and size of stickies to show products (yellow), process steps (pink & blue small) and how they differ from each other (orange small).

@@ -1,5 +1,4 @@
 ---
-# blog post attributes in front matter format
 tags: [push-notification, pubnub, pusher, websockets, pubsub]
 title: Get notified with push notification
 publish_datetime: 2012-07-13T00:00:07.0Z

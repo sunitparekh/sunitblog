@@ -1,5 +1,4 @@
 ---
-# blog post attributes in front matter format
 tags: [rwd]
 title: Why responsive web design?
 publish_datetime: 2013-02-12T00:00:07.0Z

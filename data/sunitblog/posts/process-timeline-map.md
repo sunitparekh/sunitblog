@@ -1,7 +1,6 @@
 ---
-# blog post attributes in front matter format
-tags: [agile, analysis]
-title: Process timeline map for business analysis
+tags: [envisioning, agile]
+title: Project envisioning exercise - Process Timeline Map
 publish_datetime: 2012-05-07T00:00:07.0Z
 description: Describes the method to study business processes in visual way to build common understanding with business during project inception.
 ---
