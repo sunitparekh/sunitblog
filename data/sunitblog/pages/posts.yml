@@ -17,6 +17,7 @@
               model: posts
               match:
                 tags: "#{page.context.params['tags']}"
+              limit: 0
               return: articles
           template:
             type: slim
