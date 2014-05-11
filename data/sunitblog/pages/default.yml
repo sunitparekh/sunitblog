@@ -15,17 +15,7 @@
     -
       name: header
       modules:
-        -
-          recipes:
-            -
-              type: soupcms-api
-              model: schemaless
-              match:
-                doc_id: navigation
-              return: navigation
-          template:
-            type: slim
-            name: bootstrap/navigation
+        - navigation
         -
           recipes:
             -
@@ -44,36 +34,9 @@
     -
       name: sidebar
       modules:
-        -
-          recipes:
-            -
-              type: http
-              url: "#{context.application.soupcms_api_url}/schemaless/doc_id/author"
-              return: author
-          template:
-            type: slim
-            name: bootstrap/author
-        -
-          recipes:
-            -
-              type: http
-              url: "#{context.application.soupcms_api_url}/schemaless/doc_id/author"
-              get: "result['projects']"
-              return: articles
-          template:
-            type: slim
-            name: bootstrap/list-view
-            config:
-              title: My Projects
-        -
-          recipes:
-            -
-              type: soupcms-api
-              url: posts/tag-cloud
-              return: tag-cloud
-          template:
-            type: slim
-            name: bootstrap/tag-cloud
+        - author
+        - projects
+        - tag-cloud
     -
       name: footer
       modules:
