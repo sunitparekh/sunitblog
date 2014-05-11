@@ -56,6 +56,18 @@
         -
           recipes:
             -
+              type: http
+              url: "#{context.application.soupcms_api_url}/schemaless/doc_id/author"
+              get: "result['projects']"
+              return: articles
+          template:
+            type: slim
+            name: bootstrap/list-view
+            config:
+              title: My Projects
+        -
+          recipes:
+            -
               type: soupcms-api
               url: posts/tag-cloud
               return: tag-cloud
