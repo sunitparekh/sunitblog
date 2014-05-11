@@ -1,5 +1,5 @@
 ---
-tags: [envisioning, agile, software-development]
+tags: [envisioning, agile, software-design]
 title: Ruby vs Java vs .NET - How much does it matter on web projects?
 publish_datetime: 2012-04-25T00:00:07.0Z
 description: On most of the projects we just talk and talk about which language is the right choice (Java vs Ruby vs .NET vs ...) for your web application development. This post talks about what all other things matter equally and we should pay attention to.

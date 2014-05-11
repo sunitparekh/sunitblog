@@ -1,5 +1,5 @@
 ---
-tags: [rwd]
+tags: [software-design]
 title: Why responsive web design?
 publish_datetime: 2013-02-12T00:00:07.0Z
 description: Objective of this blog post is look into the history and learn what problem we try to solve with RWD.

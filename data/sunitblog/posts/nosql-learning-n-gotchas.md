@@ -1,5 +1,5 @@
 ---
-tags: [NoSQL, mongoDB]
+tags: [NoSQL, software-design]
 title: NoSQL learning & gotchas based on MongoDB experience
 publish_datetime: 2012-02-14T00:00:07.0Z
 description: I have been working on NoSQL database had some interesting learning on when not to use NoSQL database. All following learning are based on my NoSQL experience with mongoDB. This is an ongoing document which I am planning to keep updating as I keep learning.

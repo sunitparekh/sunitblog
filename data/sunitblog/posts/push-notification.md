@@ -1,5 +1,5 @@
 ---
-tags: [push-notification, pubnub, pusher, websockets, pubsub]
+tags: [software-design]
 title: Get notified with push notification
 publish_datetime: 2012-07-13T00:00:07.0Z
 description: Write post description here...

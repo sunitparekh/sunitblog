@@ -1,5 +1,5 @@
 ---
-tags: [devops, continuous delivery]
+tags: [devops, software-design]
 title: Zero downtime using blue-green deployment strategy
 publish_datetime: 2013-10-23T01:00:01.0Z
 ---

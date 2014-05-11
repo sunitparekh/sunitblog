@@ -1,5 +1,5 @@
 ---
-tags: [aws, s3]
+tags: [aws]
 title: Amazon S3 learning with HTTPS serving very slow
 publish_datetime: 2012-02-25T00:00:07.0Z
 description: Serving images from S3 over HTTPS is slow, using CloudFront to serve S3 content over HTTPS gives significant improvement in time.

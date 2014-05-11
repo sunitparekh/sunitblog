@@ -1,5 +1,5 @@
 ---
-tags: [envisioning, agile, nfr]
+tags: [envisioning, agile]
 title: Cross functional requirements
 description: "It is always been difficult to identify stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception (2-3 weeks of project kick-off/initiation phase). Here is the technique to do that in short 2-3 weeks project inception."
 publish_datetime: 2013-05-04T00:00:07.0Z

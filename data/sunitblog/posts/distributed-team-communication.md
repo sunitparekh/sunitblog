@@ -1,5 +1,5 @@
 ---
-tags: [distributed-agile, communication]
+tags: [agile]
 title: Distributed team communication plan with anatomy of an iteration
 description: One of the variations of agile it is called Distributed Agile Development. And a key ingredient for distributed teams to work effectively is communication. This post describes method of how to come up with effective communication plan collaboratively with everyone including business.
 publish_datetime: 2012-05-13T00:00:07.0Z

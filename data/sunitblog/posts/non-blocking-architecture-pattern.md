@@ -1,5 +1,5 @@
 ---
-tags: [architecture pattern, software development]
+tags: [software-design]
 title: Building highly scalable and performance application using non-blocking architecture
 description: Article shows the modern way of building websites using non-blocking architecture pattern. Why this style of architecture is beneficial and what are the frameworks available to implement.
 publish_datetime: 2013-05-07T01:00:01.0Z
