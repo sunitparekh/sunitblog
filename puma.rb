@@ -3,6 +3,11 @@
 # start puma with:
 # bundle exec puma -C puma.rb
 
+system('export google_analytics_application_name_sunitblog=sunitparekh.in')
+system('export google_analytics_tracking_id_sunitblog=UA-49663495-1')
+system('export disqus_shortname_sunitblog=sunitblog')
+system('export HOST_NAME=www.sunitparekh.in')
+
 root = "#{Dir.getwd}"
 environment 'production'
 daemonize true
