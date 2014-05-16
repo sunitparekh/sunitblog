@@ -48,9 +48,13 @@ map '/' do
     config.application_strategy = SoupCMS::Common::Strategy::Application::SingleApp
   end
   app = SoupCMSRackApp.new
+  app.set_redirect('http://sunitparekh.in/','http://www.sunitparekh.in/home')
+  app.set_redirect('http://sunitparekh.in','http://www.sunitparekh.in/home')
+  app.set_redirect('http://www.sunitparekh.in/','http://www.sunitparekh.in/home')
+  app.set_redirect('http://www.sunitparekh.in','http://www.sunitparekh.in/home')
+
   app.set_redirect('http://blog.sunitparekh.in/','http://blog.sunitparekh.in/home')
   app.set_redirect('http://me.sunitparekh.in/','http://me.sunitparekh.in/home')
-  app.set_redirect('http://www.sunitparekh.in/','http://www.sunitparekh.in/home')
 
   # old blogger blog posts redirect
   app.set_redirect('http://www.sunitparekh.in/2011/04/design-for-feature-code-for-story.html','http://www.sunitparekh.in/posts/design-for-feature')
