@@ -38,7 +38,7 @@ I like to divide my automation tests in following structure.
 #### FrontEnd   
 {: .clear}
 
-- Controller level unit test to cover all scenarios with mocked service all to API components
+- Controller level unit test to cover all scenarios with TestDouble service call to API components
 - View level unit tests are NOT require since it will get covered in acceptance test and not many variations in sign-up view. View level unit tests are valuable, when view changes based on dataset.
 - Write unit tests for all client validation cases. e.g. email, phone, etc. JavaScript unit tests.
 
