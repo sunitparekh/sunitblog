@@ -5,6 +5,8 @@ bundle exec puma -C puma.rb
 bundle exec pumactl -F puma.rb restart
 bundle exec pumactl -F puma.rb stop
 
+ps aux | grep -i puma | awk {'print $2'} | xargs kill -9
+
 tail -f /var/log/nginx/error.log
 tail -f /var/log/nginx/access.log
 

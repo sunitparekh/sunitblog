@@ -52,7 +52,7 @@ Choose mocking or stubbing, which ever is best suited in the context. I find lot
 - I miss writing test for few scenarios.
 - Evil kicks-in and I loose motivation and interest in writing test.  
  
-To decide what kind of test I should write, how many tests to write where, and how long is acceptable time for test to run. Read more on this in another post [here](/post/test-structure)...
+To decide what kind of test I should write, how many tests to write where, and how long is acceptable time for test to run. Read more on this in another post [here](/posts/test-structure)...
   
 
 
