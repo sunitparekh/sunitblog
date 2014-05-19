@@ -61,7 +61,16 @@
           template: 
             type: slim
             name: bootstrap/article
-        - 
+        -
+          recipes:
+            -
+              type: soupcms-api
+              model: "/#{context.model_name}/slug/#{context.slug}"
+              return: article
+          template:
+            type: slim
+            name: bootstrap/share-this
+        -
           template: 
             type: slim
             name: meta/disqus
