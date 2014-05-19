@@ -44,11 +44,11 @@ TDD helps me to identify smells in my design. I have seen a code all test driven
 
 Choose mocking or stubbing, which ever is best suited in the context. I find lot of time mocking is easy for writing and maintaining tests. Over mocking is smell for me. 
 
-![TDD is a technique, thought process for software development](/assets/sunitblog/posts/images/tdd-is-a-technique/tdd-is-a-technique.png)
+![TDD is a technique, thought process for software development](/assets/sunitblog/posts/images/tdd-is-a-technique/tdd-is-a-technique.svg)
 {: .full-width}
 
 ### Writing test later? 
-- How do I test the code written in first place? Manually, that more time consuming than writing a automated unit test in my mind.
+- How do I test the code written in first place? Manually. In my It is more time consuming than writing a automated unit test.
 - I miss writing test for few scenarios.
 - Evil kicks-in and I loose motivation and interest in writing test.  
  

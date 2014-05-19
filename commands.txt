@@ -21,7 +21,7 @@ ps waux | grep nginx
 
 sudo nano /etc/nginx/sites-available/me.sunitparekh.in
 
-
+bundle exec soupcms seed sunitblog
 
 watch -n 5 free -m
 
