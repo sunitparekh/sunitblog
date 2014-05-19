@@ -60,13 +60,11 @@ I like to divide my automation tests in following structure.
     
 1. **Do not repeat tests.** Collectively build the test suites. Do not retest scenario if it it already covered in another test suite.
 2. **Revisit and adapt, test structure periodically.**
-
-{: .clear}
    
 ![Test structure](/assets/sunitblog/posts/images/test-structure/test-structure.svg){: .col-md-10 }
 {: .left}
 
-
+Please share your feedback and experience by commenting on this article.
 {: .clear}
 
 
