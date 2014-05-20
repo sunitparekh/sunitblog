@@ -5,34 +5,32 @@ publish_datetime: 2014-05-19T00:00:07.0Z
 description: Why I follow TDD. For me TDD is a technique, a thought process, I would never like to write production code without thinking of use case (a test scenario), and for me TDD is starts here.
 ---
 
-After hearing discussions of Martin Fowler, Kent Beck and DHH. I thought of putting down, why I follow TDD. For me TDD is a technique, a thought process, I would never like to write production code without thinking of use case (a test scenario).
+After hearing discussions of Martin Fowler, Kent Beck and DHH. I thought of putting down, why I follow TDD. For me TDD is a technique, a thought process for solving problems. I would avoid writing production code without thinking of a use case first.
 
-I think of a use case (lets call it test case) for which I want to write code. Now this thinking it-self is 'test driven' for me. And based on my test cases I will start thinking about my design. And If I am correct no one like to go, let me implement strategy pattern and later I will find use case for it. 
+I think of a use case (lets call it test case) for which I want to write code. Now this thinking it-self is 'test driven' for me. And based on my test cases identified, I will start thinking about my design. No one like to go, let me implement strategy pattern and later I will find use case for it. 
 
-My take is, I need to write test before I run the code, and to know my code works, I need to test it. And to test, I prefer automated tests, which can run as many times I want. So to me, I write the test before I run it. Now take a step further and write it first, no harm. However, I understand sometime it is difficult to write test without even having a 'code structure skeleton' in place. So according to me putting "code structure skeleton" in place is okay, Hold on, do not start implementing methods. My tip, if we don't get into thinking of 'test class' should map one-2-one with class, you can write test without 'code structure skeleton'. Lot of time, I write all the test cases as pending tests, and then I start thinking of abstraction based on all test I see in front of my eyes, come up with design to cover all test cases and start implementing step by step, one test case a time with feedback loop in place from first test, and for me TDD is starts here.
+I need to write test before I run the code, and to know my code works, I need to test it. To test I prefer automated tests, which can run as many times as I want. So to me, I write the test before I run it. Now take a step further and write it first, no harm. However, However sometime it is difficult to write test without even having a 'code structure skeleton' in place. So according to me putting 'code structure skeleton' in place is okay. Hold on, do not start implementing methods. My tip, if we don't get into thinking of 'test class' should map one-to-one with class, you can write test without 'code structure skeleton'. Lot of times, I write all the test cases as pending tests, and then I start thinking of abstraction based on all test I see in front of my eyes, come up with design to cover all test cases. Now start implementing step by step, one test case a time, with feedback loop in place from first test. For me TDD starts here.
 
 While building test cases on whiteboard or as pending test cases, I might have identified design pattern to implement. Now should I start writing my test and code, without design pattern abstraction and refactor to the desired design pattern, or jump directly into defining classes and it's test in desired design pattern? Both approaches works for me. Lots of time I don't have a clue, can't think of abstraction and design upfront, in that case starting flat is good. And after few test case implementation, my code starts shaping up and I will have more insight to find better abstractions.
  
 I like to start small, so I write my first test case and write code to implement that. However, sometime I like thinking of design little upfront to avoid immediate test cases implementation rework, but will not code for it. Sometime I write test-case with already though of design in mind.
 
-And with similar technique, **practicing TDD also helps me with siding and dicing stories**, because TDD is a technique that helps me think what is minimal use-case that I can implement and get started.
+And with similar technique, **practicing TDD helps me with slicing and dicing stories**, because TDD is a technique that helps me think what is minimal use-case that I can implement to get started.
 
-**TDD helps me with good naming**, since I started from the use-case. Since I code **call** first, that helps me in naming it from usage perspective and not from implementation perspective. 
+**TDD helps me with good naming**, because I started from the use-case. Since I code **client (call)** first, that helps me in naming it from usage perspective and not from implementation perspective. 
 
 ### Old days
 
-I am privileged that I have seen some old days of software development. And hence can understand the evolution better. 
-In old days, any call to I/O was costly. Database queries where slow, 10 sec page load was considered good. Lack of tools available for unit testing, refactoring. And hence some approaches were taken, e.g. in unit test, do not make database calls. otherwise your test will be slow, setting up data in database was tedious,
-Now, SSD is better than old days RAM, NIO libraries used by default, and it is very fast, hence database calls are cheap. With help of libraries like factory-girl it is very easy to setup data in database. So no problem if you test hits the database.  
+I had a privilege to see some old days of software development. In old days, any call to I/O was costly. Database queries where slow, 10 sec page load was considered good. Lack of tools available for unit testing, refactoring. And hence some approaches were taken, e.g. in unit test, do not make database calls. otherwise your test will be slow, setting up data in database was tedious. Today, SSD is faster than old days RAM, NIO libraries used by default, and it is very fast, hence database calls are cheap. With help of libraries like factory-girl it is very easy to setup data in database. So now, no problem if you test hits the database. However remember, one of the easy way to make test suite complete faster is to run them in parallel. With hitting database in tests, limits your option to run tests in parallel. 
 
-So I would say we need to understand why's of old days and keep adapting our approaches to the new days. 
+So I would say we need to understand why of old days and keep adapting our approaches to the new days. 
 
 
 ### TDD and design?
 TDD helps me to identify smells in my design. I have seen a code all test driven, but full of switch case constructs without abstractions. In my view, If I am following TDD does not mean my design is good. Here are few obvious test smells that helps me identify bad design,
 
-- **Difficult to write tests,** due to too many dependencies which requires too much setup code. In rails world example of 'Fat Controllers' without services or helper classes.
-- **Too many # of tests for single unit**, class having just too many responsibility. In rails world example of 'Fat Models'.
+- **Difficult to write tests,** because to too many dependencies which requires too much setup code. In Rails world example of 'Fat Controllers' without services or helper classes.
+- **Too many tests for single unit**, class having just too many responsibility. In Rails world example of 'Fat Models'.
 - **Way too many assertions**, this happens when one method doing too many things or I have written test at wrong level. One test trying test too many things at once.  
 - **Way too many tests for a component, and takes very long to run all test.** Individual tests are very fast. This may be architecture smell of monolithic application. Break it down into small components. On my last project we had UI as separate repo with only Views (templates), CSS and JS, includes unit tests for Views and JavaScript. 
 
@@ -51,6 +49,7 @@ Choose mocking or stubbing, which ever is best suited in the context. I find lot
 - Manually testing is more time consuming than writing a automated unit test. 
 - I miss writing test for few scenarios.
 - Evil kicks-in and I loose motivation and interest in writing test.  
+
  
 To decide what kind of test I should write, how many tests to write where, and how long is acceptable time for test to run. Read more on this in another post [here](/posts/test-structure)...
   
