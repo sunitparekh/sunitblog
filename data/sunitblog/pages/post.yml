@@ -12,6 +12,17 @@
         - author
         - projects
         -
+          recipes:
+            -
+              type: soupcms-api
+              model: "/#{context.model_name}/slug/#{context.slug}"
+              return: article
+          template:
+            type: slim
+            name: bootstrap/share-this
+            config:
+              title: Share
+        -
           recipes: 
             - 
               type: soupcms-api
@@ -70,6 +81,8 @@
           template:
             type: slim
             name: bootstrap/share-this
+            config:
+              title: Share...
         -
           template: 
             type: slim

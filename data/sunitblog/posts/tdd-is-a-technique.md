@@ -23,7 +23,7 @@ And with similar technique, **practicing TDD helps me with slicing and dicing st
 
 I had a privilege to see some old days of software development. In old days, any call to I/O was costly. Database queries where slow, 10 sec page load was considered good. Lack of tools available for unit testing, refactoring. And hence some approaches were taken, e.g. in unit test, do not make database calls. otherwise your test will be slow, setting up data in database was tedious. Today, SSD is faster than old days RAM, NIO libraries used by default, and it is very fast, hence database calls are cheap. With help of libraries like factory-girl it is very easy to setup data in database. So now, no problem if you test hits the database. However remember, one of the easy way to make test suite complete faster is to run them in parallel. With hitting database in tests, limits your option to run tests in parallel. 
 
-So I would say we need to understand why of old days and keep adapting our approaches to the new days. 
+So I would say we need to understand, why of old days and keep adapting our approaches to the new days. 
 
 
 ### TDD and design?
