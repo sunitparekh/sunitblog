@@ -17,7 +17,3 @@ stdout_redirect "#{root}/log/sunitblog.stdout.log","#{root}/log/sunitblog.stderr
 #bind "unix://#{root}/tmp/puma/socket"
 
 rackup "#{root}/config.ru"
-
-threads 4, 8
-
-activate_control_app

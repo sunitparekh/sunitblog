@@ -4,6 +4,9 @@ require 'sprockets'
 require 'soupcms/core'
 require 'soupcms/api'
 
+if ENV['RACK_ENV'] == 'production'
+  SoupCMS::Common::Util::HttpCacheStrategy.default_max_age = 3600
+end
 
 SoupCMS::Common::Strategy::Application::SingleApp.configure do |app|
   app.app_name = 'sunitblog'

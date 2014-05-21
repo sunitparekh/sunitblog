@@ -13,6 +13,9 @@ tail -f /var/log/nginx/access.log
 tail -f /var/log/nginx/sunitblog-error.log
 tail -f /var/log/nginx/sunitblog-access.log
 
+tail -100f ~/sunitblog/log/sunitblog.stdout.log
+tail -100f ~/sunitblog/log/sunitblog.stderr.log
+
 
 ls -la /root/sunitblog/tmp/puma
 
