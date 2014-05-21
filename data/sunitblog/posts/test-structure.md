@@ -1,11 +1,11 @@
 ---
 tags: [software-development, tdd]
 title: Test structure
-publish_datetime: 2014-05-19T00:00:07.0Z
-description: Always on every project, this question comes up. What kind of test we should write? What is the right level? How much? 
+publish_datetime: 2014-05-19T00:01:07.0Z
+description: Always on every project question comes up, What kind of test we should write? What is the right level? How much? 
 ---
 
-Always on every project, this question comes up. What kind of test we should write? What is the right level? How much? 
+Always on every project question comes up, What kind of test we should write? What is the right level? How much? 
 
 ### My guideline for automated tests?
 
