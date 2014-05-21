@@ -48,8 +48,12 @@ map '/' do
     config.application_strategy = SoupCMS::Common::Strategy::Application::SingleApp
   end
   app = SoupCMSRackApp.new
+  app.set_redirect('http://localhost:9292/','http://localhost:9292/home')
+  app.set_redirect('http://localhost:9292','http://localhost:9292/home')
+
   app.set_redirect('http://sunitparekh.in/','http://www.sunitparekh.in/home')
   app.set_redirect('http://sunitparekh.in','http://www.sunitparekh.in/home')
+
   app.set_redirect('http://www.sunitparekh.in/','http://www.sunitparekh.in/home')
   app.set_redirect('http://www.sunitparekh.in','http://www.sunitparekh.in/home')
 

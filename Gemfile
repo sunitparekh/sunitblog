@@ -4,6 +4,7 @@ ruby '2.1.1'
 # gem 'soupcms-cli', path: '../soupcms/soupcms-cli'
 gem 'soupcms-cli', github: 'soupcms/soupcms-cli'
 
+# gem 'soupcms-common', path: '../soupcms/soupcms-common'
 gem 'soupcms-common', github: 'soupcms/soupcms-common'
 
 # gem 'soupcms-core', path: '../soupcms/soupcms-core'
