@@ -25,6 +25,7 @@ ps waux | grep nginx
 
 
 sudo nano /etc/nginx/sites-available/me.sunitparekh.in
+sudo nano /etc/hosts
 
 bundle exec soupcms seed sunitblog
 
