@@ -1,7 +1,7 @@
 ---
   meta: 
     model: posts
-  areas: 
+  areas:
     -
       name: header
       modules:
@@ -18,38 +18,43 @@
               type: soupcms-api
               model: "/#{context.model_name}/slug/#{context.slug}"
               return: toc-document
-            - 
+            -
               type: post-processor
               processor: SoupCMS::Core::Processor::NokogiriTOC
-              config: 
+              config:
                 toc_for: "#{data['toc-document']['content']['value']}"
-                levels: 
+                levels:
                   - h2
                   - h3
                   - h4
                   - h5
                   - h6
               return: table-of-content
-          template: 
+          template:
             type: slim
             name: bootstrap/table-of-content
-            config: 
+            config:
               title: Contents
         - tag-cloud
-        - 
-          recipes: 
-            - 
+        -
+          recipes:
+            -
               type: soupcms-api
               model: posts
               fields: 
                 - title
                 - slug
+              limit: 10
               return: articles
           template: 
             type: slim
             name: bootstrap/list-view
             config: 
               title: Recent Posts
+              all-link:
+                label: all posts >
+                link:
+                  url: /home
     - 
       name: body
       modules: 
