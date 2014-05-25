@@ -1,5 +1,5 @@
 ---
-tags: [tdd, sofware-development, agile]
+tags: [tdd, software-development, agile, testing]
 title: TDD is a technique, thought process for software development
 publish_datetime: 2014-05-19T00:00:07.0Z
 description: Why I follow TDD. For me TDD is a technique, a thought process, I would never like to write production code without thinking of use case (a test scenario), and for me TDD is starts here.
