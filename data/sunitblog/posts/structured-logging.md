@@ -9,20 +9,20 @@ Distributed system architecture is kind of de-facto for complex systems. However
  
 ## What is structured logging?
 *******
-Not only log level is important, bue how and what message that we log also matters. Our log messages most of the time looks like following, 
+Not only log level is important, but how and what message are logged also matters. Log messages most of the time looks like following, 
  
 ~~~
 127.0.0.1 [25/May/2014:01:37:44 -0400] "GET /api/modules/doc_id/navigation HTTP/1.1" 200 476  
 ~~~ 
 
-Above message is interpreted well by humans since we know, `120.0.0.1` is IP,  `25/May/2014:01:37:44 -0400` is date, `GET` is request methods, `200` is response status and `476` is server response time... 
+Above message is interpreted well by humans since we know, `120.0.0.1` is IP,  `25/May/2014:01:37:44 -0400` is timestamp, `GET` is request methods, `200` is response status and `476` is server response time... 
 And such interpretation is required for each message logging. With number of system involved it is difficult to parse and build indexes for such messages. 
   
 ~~~
 ip="127.0.0.1" timestamp="25/May/2014:01:37:44 -0400" method=GET url="/api/modules/doc_id/navigation" protocol=HTTP/1.1 status=200 responseTime=476
 ~~~ 
   
-Above message is self explanatory and easy to parse and index. This is also know as **logging with context**. With context logging, we can perform queries like find all slow pages, which gives all the url with status=200 and responseTime greater than 2000.
+Above structured message is self explanatory and easy to parse and index. This is also know as _logging with context_. With structured logging, we can perform queries like find all slow pages, _collect urls with `status = 200` and `responseTime > 2000`_.
 
 
 > **Unique identifier across systems for transaction tracking,**
@@ -31,7 +31,7 @@ Above message is self explanatory and easy to parse and index. This is also know
 
 ## Aggregate logs
 *******
-There are multiple approaches for log aggregation available today out of box. 
+There are multiple approaches available for log aggregation. 
 
 #### Log File Replication
 Simplest one is, continue logging to file system and setup a independent process to monitor files and send logs to server every 'n' milliseconds. 
