@@ -17,15 +17,13 @@ There are around 35 such "bility" that need to be discussed. During the session 
 Once all the 'bility' is discussed break out in small team, discuss each XFR requirements and convert them into stories.
 {: .clear}
 
-![cross functional requirement wall](/assets/sunitblog/posts/images/cross-functional-requirements/cards-wall.jpg)
-{: .full-width}
+![cross functional requirement wall](/assets/sunitblog/posts/images/cross-functional-requirements/cards-wall.jpg){: .full-width}
 
 After creating the story list of XFRs, treat them as other stories. Combine the backlog of functional and XFR stories, estimate and prioritise stories together.
 
 As documentation,  I like to use mind map since it fits that format nicely. Please have a look at the one displayed below for your reference.
 
-![cross functional requirement mindmap](/assets/sunitblog/posts/images/cross-functional-requirements/mind-map.png)
-{: .full-width}
+![cross functional requirement mindmap](/assets/sunitblog/posts/images/cross-functional-requirements/mind-map.png){: .full-width}
 
 I like calling NFRs as cross functional requirements (XFR) rather than non-functional, since most of the non-functional requirements are kind of indirect functional requirements. e.g. page load time for end user is performance requirement which indirectly related to better user experience.
 

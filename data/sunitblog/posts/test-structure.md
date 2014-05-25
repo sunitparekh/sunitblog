@@ -10,7 +10,7 @@ Always on every project question comes up, What kind of test we should write? Wh
 ### My guideline for automated tests?
 
 1. **It should be fast.** definition of fast itself is debatable. Team decides collectively, tests should run within 'n' min and define it for all test suites (unit, integration, acceptance).  
-    1. How frequently your team check-ins (remote push) the code? 2-3 times a day, 10 min is acceptable. However if 20 times a day 10 min is not okay, I need faster test suite. Remember how many times you run these tests and making it 1 min faster sometime saves 1000 min collectively across team. 
+    1. How frequently your team check-ins the code (remote push)? 2-3 times a day, 10 min is acceptable. However if 20 times a day 10 min is not okay, I need faster test suite. Remember how many times you run these tests and making it 1 min faster sometime saves 1000 min collectively across team. 
     2. How much time is acceptable to roll-out critical bug fix in production? all your CI pipeline should run within 30 min, including builds, tests etc. Lower is better, but don't kill yourself in getting tests faster and faster. be pragmatic. 
 2. **When it fails, it should point broken code.** When test fails, If I have to spend 1 hour just debugging why this test failed, than a test is trying to test way too many things in one test. Tests are course grained. this is the way I know what is unit for me. 
 3. **It should NOT be fragile.** Test should not fail without reasons. And re-running tests should not pass. Watch more closely your time dependent tests. 
@@ -32,8 +32,8 @@ I like to divide my automation tests in following structure.
    
 ### Example, sign-up scenario
 
-![Multi-tier application](/assets/sunitblog/posts/images/test-structure/multi-tier-app.svg){: .col-md-8 }
-{: .left }
+![Multi-tier application](/assets/sunitblog/posts/images/test-structure/multi-tier-app.svg){: .full-width}
+{: .col-md-8}
 
 #### FrontEnd   
 {: .clear}
@@ -53,8 +53,7 @@ I like to divide my automation tests in following structure.
 
 ### How my CI pipeline will look?
 
-![CI Pipeline workflow](/assets/sunitblog/posts/images/test-structure/ci-test-workflow.svg)
-{: .full-width}
+![CI Pipeline workflow](/assets/sunitblog/posts/images/test-structure/ci-test-workflow.svg){: .full-width}
 
 ### Guideline in deciding test structure
     
@@ -62,8 +61,8 @@ I like to divide my automation tests in following structure.
 2. **Cove more scenarios in fast test suite.** Write JavaScript unit tests to test client side validations, Avoid Selenium based acceptance tests to do so.
 3. **Revisit and adapt test structure periodically.**
    
-![Test structure](/assets/sunitblog/posts/images/test-structure/test-structure.svg){: .col-md-10 }
-{: .left}
+![Test structure](/assets/sunitblog/posts/images/test-structure/test-structure.svg){: .full-width}
+{: .col-md-8}
 
 Please share your feedback and experience by commenting on this article.
 {: .clear}
