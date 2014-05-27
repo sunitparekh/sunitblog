@@ -22,7 +22,7 @@
               type: inline
               data:
                 title: sUnit blog
-                sub_headline: Blog space of technical & agile experience
+                sub_headline: Software development & agile experience blog space
                 image:
                   source: cloudinary
                   base_url: http://res.cloudinary.com/sunitparekh/image/upload

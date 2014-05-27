@@ -2,24 +2,25 @@
   doc_id: navigation
 
   logo:
-    font_icon: fa fa-home
+    image:
+      url: "/assets/logo.svg"
     text: "sUnit blog"
     link:
       url: home
 
   menu:
 
-    
     left:
       -
-        label: Latest posts
+        label: "&nbsp;Latest posts"
         link:
           url: posts
-    
+        font_icon: fa fa-comment-o fa-fw
+
 
     right:
       -
-        label: About
+        label: "&nbsp;About"
         link:
           url: about
         font_icon: fa fa-user
