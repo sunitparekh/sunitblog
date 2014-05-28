@@ -38,16 +38,16 @@ TDD helps me to identify smells in my design. I have seen a code all test driven
 ### When to go for TestDouble, Mocking or Stubbing?
 - **Test depends on external components which is out of test control.** e.g. web-service calls. Also think about multiple developers running the test at the same time, with single backend system everyone connecting to. 
 - **Failing test doesn't point broken code.** When I write course grain test, this happens more often. This tells me my unit for tests is not well defined, trying to test too many things at once. Isolate code not under test using TestDouble. 
-- **Running test suite, takes lots of time.** Isolate time consuming code with TestDouble. If my test are taking too long to finish due to one remote call. I might just mock it and have another test to cover it and not pay cost in every test. One of the easy way to make test suite complete faster is to run them in parallel. If I write unit test with database, you give away option of running them in parallel, since multiple tests tries to setup data in parallel. 
+- **Running test suite, takes lots of time.** Isolate time consuming code with TestDouble. If my test are taking too long to finish due to one remote call. I might just mock it and have another test to cover it and not pay cost in every test. One of the easy way to make test suite complete faster is to run them in parallel. If I write unit test with database, you give away option of running them in parallel. 
 
-Choose mocking or stubbing, which ever is best suited in the context. I find lot of time mocking is easy for writing and maintaining tests. Too much mocking in one test is smell for me.
+> Choose mocking or stubbing, which ever is best suited in the context. I find lot of time mocking is easy for writing and maintaining tests. Too much mocking in one test is smell for me.
 
 ![TDD is a technique, thought process for software development](/assets/sunitblog/posts/images/tdd-is-a-technique/tdd-is-a-technique.svg){: .full-width}
 
 
-### Writing test later? 
+### Avoid writing test later 
 - Manually testing is more time consuming than writing a automated unit test. 
-- I miss writing test for few scenarios.
+- Sometime I miss writing tests for certain scenario.
 - Evil kicks-in and I loose motivation and interest in writing test.  
 
  

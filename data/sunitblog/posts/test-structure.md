@@ -2,33 +2,38 @@
 tags: [software-development, tdd]
 title: Test structure
 publish_datetime: 2014-05-19T00:01:07.0Z
-description: Always on every project question comes up, What kind of test we should write? What is the right level? How much? 
+description: On every project question comes up, what kind of test we should write? what is the right level? how much? 
 ---
 
 Always on every project question comes up, What kind of test we should write? What is the right level? How much? 
 
 ### My guideline for automated tests?
 
-1. **It should be fast.** definition of fast itself is debatable. Team decides collectively, tests should run within 'n' min and define it for all test suites (unit, integration, acceptance).  
-    1. How frequently your team check-ins the code (remote push)? 2-3 times a day, 10 min is acceptable. However if 20 times a day 10 min is not okay, I need faster test suite. Remember how many times you run these tests and making it 1 min faster sometime saves 1000 min collectively across team. 
-    2. How much time is acceptable to roll-out critical bug fix in production? all your CI pipeline should run within 30 min, including builds, tests etc. Lower is better, but don't kill yourself in getting tests faster and faster. be pragmatic. 
-2. **When it fails, it should point broken code.** When test fails, If I have to spend 1 hour just debugging why this test failed, than a test is trying to test way too many things in one test. Tests are course grained. this is the way I know what is unit for me. 
-3. **It should NOT be fragile.** Test should not fail without reasons. And re-running tests should not pass. Watch more closely your time dependent tests. 
-4. **Value vs Effort.** Based on project domain and complexity decide what you want to have automated tests e.g. still today writing CSS tests is difficult and more effort in writing and maintaining it, and if that fails what is the impact. However, javascript testing is now days very easy to get started, not fragile, provides value in testing cross browser, so do it.  
-5. **Do not test library you borrowed.** write test around code which is in your control. In some case if I decide to write test for the external libraries, I write in separate repo and run it every time I update the library version. This is true even for the case of testing external dependencies. 
+1. **It should be fast.** definition of fast itself is debatable. Team should decide collectively, what is the acceptable time for test suite to run? and define it for all test suites (unit, integration, acceptance). Some guideline on deciding the time,  
+    1. How frequently your team check-ins the code (remote push)? In case of 2-3 times a day, 10 min is acceptable. However if 20 times a day, 10 min is not acceptable. I need faster test suite. Remember making test run 1 min faster, can save 1000 minutes collectively across team. 
+    2. How much time is acceptable to roll-out critical bug fix in production? Which means all your CI pipeline should run within 'n' min, including builds, tests etc. Lower is better, but don't kill yourself in getting tests faster and faster, be pragmatic. In most of the projects upto 30 min is acceptable time for check-in to deployment.
+    3. One of the easy way to make test suite complete faster is to run them in parallel. 
+2. **When it fails, it should point broken code.** When test fails, if it takes 1 hour to find why this test failed, than something wrong with the test. In one test we are trying to test too many things, tests are course grained.  
+3. **It should NOT be fragile.** Test should not fail without reasons. And re-running tests should not pass. Watch more closely on time dependent tests. 
+4. **Value vs Effort** Based on project domain and complexity decide what kind of test we would like to have automated, and if that fails what is the impact. Writing CSS tests is difficult and more effort in maintaining it, so I might think twice before building automated tests for CSS. However, javascript testing provides value with business logic being getting written on client side, easy to get started with more mature toolset, so do it.  
+5. **Do not test library you borrowed.** If I decide to write test for the external libraries, I write in separate repo and run it every time I update the library version.  
 
 
 ### Test structure Pyramid
 I like to divide my automation tests in following structure.
 
-1. **Unit tests:** runs fast, I should be able to run before every check-in without getting frustrated. provide me exactly what failed. model, controller & view tests, javascript tests all comes under this category. I encourage covering any test cases with fastest test possible. e.g. I have client side filtering in my code. Should I write Cypebara acceptance test to cover all scenario or write simple JavaScript tests to cover all scenario. The answer is fast, isolated JavaScript tests.
-    - within 5 min, max unto 10 min.
-2. **Integration tests:** runs slower than unit but helps tests across the components. However, faster than acceptance tests, which are E2E.  contract tests across systems. Sometime I do not need this.
-    - within 5 min, max unto 15 min.
-3. **Acceptance tests:** runs E2E test cases. most of the time happy user journeys, and critical failure scenario which can not be tested by unit tests. This proves to me that my E2E integration flow is working for me.
-    - within 10 min, max 30 min.
+1. **Unit tests:** runs fast, points exactly what failed. Write unit tests for models, controllers & views. Javascript tests also comes under this category.  
+    - I have client side filtering logic in browser. Should I write Cypebara acceptance tests or JavaScript unit tests to cover all variations? The answer is fast JavaScript tests. I encourage writing unit test for each and every test case.
+    - Runs within 5 min, max unto 10 min.
+    - Is hitting database okay in unit tests? With unit test with database, I give away option of running them in parallel. So if my unit test runs pretty fast and don't need parallel execution, may be fine.
+2. **Integration tests:** runs slower than unit but helps tests across the components. Most of time there covered in the acceptance tests. 
+    - Test covering interactions and contract between systems and external system. 
+    - Runs within 5 min, max unto 15 min.
+3. **Acceptance tests:** E2E test cases. Most of the time happy user journeys, and critical failure scenario which can not be tested by unit tests. This also helps me to verify my E2E integration flow is working for me. 
+    - Generally I like to run these test in production like environment using artifacts build for deployment.
+    - Runs within 10 min, max 30 min.
 4. **Performance tests:** I should be able to run multiple times a day and within acceptable time frame of the critical production fix. 
-    - Upto 2 hours is okay for me.
+    - Upto 2 hours
    
 ### Example, sign-up scenario
 
