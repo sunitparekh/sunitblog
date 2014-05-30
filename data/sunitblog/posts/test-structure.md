@@ -5,11 +5,11 @@ publish_datetime: 2014-06-19T00:01:07.0Z
 description: On every project question comes up, what kind of test we should write? what is the right level? how much? 
 ---
 
-Always on every project question comes up, What kind of test we should write? What is the right level? How much? 
+Always on every project question comes up, What kind of test we should write? What is the right level? How much?  
 
 ### My guideline for automated tests?
 
-1. **It should be fast.** definition of fast itself is debatable. Team should decide collectively, what is the acceptable time for test suite to run? and define it for all test suites (unit, integration, acceptance). Some guideline on deciding the time,  
+1. **It should be fast.** definition of fast is debatable. Team should decide collectively, what is the acceptable time for test suite to run and define it for all test suites unit, integration and acceptance. Some guideline on deciding the time,  
     1. How frequently your team check-ins the code (remote push)? In case of 2-3 times a day, 10 min is acceptable. However if 20 times a day, 10 min is not acceptable. I need faster test suite. Remember making test run 1 min faster, can save 1000 minutes collectively across team. 
     2. How much time is acceptable to roll-out critical bug fix in production? Which means all your CI pipeline should run within 'n' min, including builds, tests etc. Lower is better, but don't kill yourself in getting tests faster and faster, be pragmatic. In most of the projects upto 30 min is acceptable time for check-in to deployment.
     3. One of the easy way to make test suite complete faster is to run them in parallel. 
@@ -34,6 +34,8 @@ I like to divide my automation tests in following structure.
     - Runs within 10 min, max 30 min.
 4. **Performance tests:** I should be able to run multiple times a day and within acceptable time frame of the critical production fix. 
     - Upto 2 hours
+    
+> One test strategy including all automated tests following [Test Pyramid](http://martinfowler.com/bliki/TestPyramid.html). Prefer unit tests to cover test scenario over any other test where ever possible.    
    
 ### Example, sign-up scenario
 
@@ -43,7 +45,7 @@ I like to divide my automation tests in following structure.
 #### FrontEnd   
 {: .clear}
 
-- Controller level unit test to cover all scenarios with TestDouble service call to API components
+- Write controller level unit test to cover all scenarios with TestDouble service call to API components
 - View level unit tests are NOT require since not many variations in sign-up view and it will get covered in acceptance test. View level unit tests are valuable, when view changes based on data-set.
 - Write unit tests for all client validation cases. e.g. email, phone, etc. JavaScript unit tests.
 
@@ -62,9 +64,9 @@ I like to divide my automation tests in following structure.
 
 ### Guideline in deciding test structure
     
-1. **Avoid repeating tests.** Collectively build the test suites. Avoid retesting scenario if it it already covered in another test suite.
+1. **Avoid repeating tests.** Collectively build the test suites. Avoid retesting scenario if it it already covered in another test suite. Ask yourself, if I can write unit test, should I write acceptance test? 
 2. **Cove more scenarios in fast test suite.** Write JavaScript unit tests to test client side validations, Avoid Selenium based acceptance tests to do so.
-3. **Revisit and adapt test structure periodically.**
+3. **Revisit and adapt test structure periodically.** Time to time keep revisiting the test suite and refactor tests to keep Test Pyramid in shape.  
    
 ![Test structure](/assets/sunitblog/posts/images/test-structure/test-structure.svg){: .full-width}
 {: .col-md-8}
