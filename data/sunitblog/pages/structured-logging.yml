@@ -1,0 +1,39 @@
+---
+  meta: 
+    model: posts
+    slug: structured-logging
+  layout:
+    type: slim
+    name: bootstrap/vanilla
+  areas:
+    -
+      name: header
+      modules: []
+    -
+      name: sidebar
+      modules:
+        - author
+        - projects
+        - share-this
+        - tag-cloud
+        -
+          template:
+            type: slim
+            name: meta/analytics/google
+    - 
+      name: body
+      modules: 
+        - 
+          recipes: 
+            - 
+              type: soupcms-api
+              model: "/#{context.model_name}/slug/#{context.slug}"
+              return: article
+          template: 
+            type: slim
+            name: bootstrap/article
+        - share-this
+        -
+          template: 
+            type: slim
+            name: meta/disqus
