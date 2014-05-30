@@ -1,7 +1,7 @@
 ---
 tags: [software-development, tdd]
 title: Test structure
-publish_datetime: 2014-05-19T00:01:07.0Z
+publish_datetime: 2014-06-19T00:01:07.0Z
 description: On every project question comes up, what kind of test we should write? what is the right level? how much? 
 ---
 

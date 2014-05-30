@@ -4,6 +4,8 @@
   logo:
     image:
       url: "/assets/logo.svg"
+      html_options:
+        class: inline-svg
     text: "sUnit blog"
     link:
       url: home
