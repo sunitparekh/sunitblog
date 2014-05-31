@@ -1,7 +1,7 @@
 ---
   meta: 
     model: posts
-    slug: structured-logging
+    slug: design-for-future
   layout:
     type: slim
     name: bootstrap/vanilla
