@@ -50,8 +50,8 @@ I like to divide my automation tests in following structure.
 - Write unit tests for all client validation cases. e.g. email, phone, etc. JavaScript unit tests.
 
 #### API
-- Service level unit tests (API controller tests) with mocking repository classes.
-- Write model level unit test for all the validation cases. e.g. email, phone, etc. 
+- Service level unit tests (API controller tests) with mocking repository classes. If hitting database is fast and writing test is easy, choose your path. However, just remember do not try to unit test model behavior in controller test, write model level unit test for test. It's okay if you like to have collaborator not okay, but objective should be to test only controller logic. 
+- Write model level unit test for all the validation cases. e.g. email, phone, password hashing, check for mandatory fields etc.
 - Repository level unit tests with hitting database. Some extremist might qualify this as integration test, fair. Since these tests runs fast and provides exact details of what's wrong when it fails, I am okay to put them as unit tests.
 
 #### End 2 End

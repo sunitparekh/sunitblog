@@ -2,7 +2,7 @@
 tags: [tdd, software-development, agile, testing]
 title: TDD is a technique, thought process for software development
 publish_datetime: 2014-06-19T00:00:07.0Z
-description: Why I follow TDD. For me TDD is a technique, a thought process, I would never like to write production code without thinking of use case (a test scenario), and for me TDD is starts here.
+description: Why I follow TDD, for me TDD is a technique, a thought process, I would never like to write production code without thinking of use case (a test scenario), and for me TDD is starts here.
 ---
 
 After hearing discussions of Martin Fowler, Kent Beck and DHH. I thought of putting down, my thoughts on why I follow TDD. For me TDD is a technique, a thought process for solving business problems. I do not like to write production code without thinking of a use case first. I think of a use case (lets call it test case) and this thinking it-self is 'test driven' for me. And based on my test cases identified, I will start thinking about my design. No one like to go, let me implement strategy pattern and later I will find use case for it. 
@@ -25,7 +25,8 @@ TDD helps me to identify smells in my design. I have seen a code test driven, bu
 
 - **Difficult to write tests,** because to too many dependencies which requires too much setup code. In Rails world example of 'Fat Controllers' without services or helper classes.
 - **Too many tests for single unit**, class having just too many responsibility. In Rails world example of 'Fat Models'.
-- **Way too many assertions**, this happens when one method doing too many things or I have written test at wrong level. One test trying test too many things at once.  
+- **Way too many assertions**, this happens when one method doing too many things or I have written test at wrong level. One test trying test too many things at once.
+- **Code change needs change in unrelated test** This is the case when change in a code, requires change in other unrelated tests. This happens due to un-necessary mocking or testing at wrong level, e.g change in model requires change in controller tests without change in any of the controller code.     
 - **Way too many tests for a component, and takes very long to run all test.** Individual tests are very fast. This may be architecture smell of monolithic application. Break it down into small components. On my last project we had UI as separate repo with only Views (templates), CSS and JS, includes unit tests for Views and JavaScript. 
 
 
