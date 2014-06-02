@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/soupcms/soupcms-api.git
-  revision: d8685831f485ce9b7d26fe6b3d28f0324d992fee
+  revision: 40d15231917e5272dddf6ddadd9e6d554efc4fbe
   specs:
     soupcms-api (0.5.0)
       bson_ext
@@ -17,13 +17,13 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-common.git
-  revision: e2704d3079df7f240735921a909e83340d803021
+  revision: 68ec5e35ad3b5ce51757fb2fcfd876fb7c144b12
   specs:
     soupcms-common (0.5.0)
 
 GIT
   remote: git://github.com/soupcms/soupcms-core.git
-  revision: a22d8cdb432399f9e842af9d300b0392810dc925
+  revision: 5563d4047d264d1b9cf6f01aa9943d66eadfaa40
   specs:
     soupcms-core (0.5.0)
       bootstrap-sass
@@ -59,7 +59,7 @@ GEM
     puma (2.8.2)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
-    sass (3.3.7)
+    sass (3.3.8)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
