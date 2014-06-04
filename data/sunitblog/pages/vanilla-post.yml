@@ -1,6 +1,5 @@
 ---
   meta: 
-    model: posts
     slug: design-for-future
   layout:
     type: slim
