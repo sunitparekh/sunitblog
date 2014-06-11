@@ -1,7 +1,7 @@
 ---
 tags: [software-development, logging]
 title: Structured Logging
-publish_datetime: 2014-06-26T00:00:07.0Z
+publish_datetime: 2014-07-01T00:00:07.0Z
 description: Logging is being followed in software development since long. How structured logging technique can be used not just for debugging, but for reporting, monitoring and alerting, performance benchmarking and in analytics as well.
 ---
 

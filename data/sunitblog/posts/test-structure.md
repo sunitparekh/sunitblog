@@ -1,22 +1,22 @@
 ---
 tags: [software-development, tdd]
-title: Test structure
-publish_datetime: 2014-06-19T00:01:07.0Z
+title: Automated tests structure
+publish_datetime: 2014-07-01T00:01:07.0Z
 description: On every project question comes up, what kind of test we should write? what is the right level? how much? 
 ---
 
-Always on every project question comes up, What kind of test we should write? What is the right level? How much?  
+On every project question comes up, what kind of test we should write? what is the right level? how much?  
 
 ### My guideline for automated tests?
 
 1. **It should be fast.** definition of fast is debatable. Team should decide collectively, what is the acceptable time for test suite to run and define it for all test suites unit, integration and acceptance. Some guideline on deciding the time,  
     1. How frequently your team check-ins the code (remote push)? In case of 2-3 times a day, 10 min is acceptable. However if 20 times a day, 10 min is not acceptable. I need faster test suite. Remember making test run 1 min faster, can save 1000 minutes collectively across team. 
     2. How much time is acceptable to roll-out critical bug fix in production? Which means all your CI pipeline should run within 'n' min, including builds, tests etc. Lower is better, but don't kill yourself in getting tests faster and faster, be pragmatic. In most of the projects upto 30 min is acceptable time for check-in to deployment.
-    3. One of the easy way to make test suite complete faster is to run them in parallel. 
-2. **When it fails, it should point broken code.** When test fails, if it takes 1 hour to find why this test failed, than something wrong with the test. In one test we are trying to test too many things, tests are course grained.  
+    3. One of the easy way to make test suite complete faster is to run them in parallel. If I write unit test with hitting database, you give away option of running them in parallel.  
+2. **When it fails, it should point broken code.** When test fails, if it takes long to find why this test failed, than something wrong with the test. Test are course grain and trying to test too many things.  
 3. **It should NOT be fragile.** Test should not fail without reasons. And re-running tests should not pass. Watch more closely on time dependent tests. 
 4. **Value vs Effort** Based on project domain and complexity decide what kind of test we would like to have automated, and if that fails what is the impact. Writing CSS tests is difficult and more effort in maintaining it, so I might think twice before building automated tests for CSS. However, javascript testing provides value with business logic being getting written on client side, easy to get started with more mature toolset, so do it.  
-5. **Do not test library you borrowed.** If I decide to write test for the external libraries, I write in separate repo and run it every time I update the library version.  
+5. **Avoid writing tests for external service behavior or libraries.** In extream case if we decide to write automated tests for such cases please write in separate independent project and run it when library version is updated or periodically to verify services are behaving as expected.  
 
 
 ### Test structure Pyramid
@@ -35,7 +35,20 @@ I like to divide my automation tests in following structure.
 4. **Performance tests:** I should be able to run multiple times a day and within acceptable time frame of the critical production fix. 
     - Upto 2 hours
     
-> One test strategy including all automated tests following [Test Pyramid](http://martinfowler.com/bliki/TestPyramid.html). Prefer unit tests to cover test scenario over any other test where ever possible.    
+> One test strategy including all automated tests following [Test Pyramid](http://martinfowler.com/bliki/TestPyramid.html). Prefer unit tests to cover test scenario over any other test where ever possible.
+    
+### Guideline on [Test Double](http://www.martinfowler.com/bliki/TestDouble.html) (Mocking or Stubbing)
+
+When should I mock? By default I do not mock or stub unless I have reasons to do so. I follow following guideline for deciding on mocking.   
+
+- **Test depends on external components which is out of test control.** e.g. web-service calls, if my test depends on external services for which I can't control the response, unit tests becomes fragile and fails for reasons like unexpected response, network issues... Use library like [vcr](https://github.com/vcr/vcr) to record-n-play web service calls.  
+- **Failing test doesn't point broken code.** When I write course grain test, this happens more often. This happens whey I try to test too many things at once. Isolate code not under test using TestDouble. 
+- **Running test suite, takes lots of time.** If my test are taking too long to finish due to remote call. I might just mock it and have single test to cover it and not pay cost in every test. Isolate time consuming code with TestDouble. 
+
+> **Which TestDouble strategy to go for?** 
+> 
+> It is okay to have multiple ways to achieve TestDouble in single project. Choose which ever is best suited in the context. I find lot of time mocking is easy for writing and maintaining tests. For models builder pattern dummy objects best suited using libraries like [factory-girl](https://github.com/thoughtbot/factory_girl) ([test fixtures](http://en.wikipedia.org/wiki/Test_fixture#Software)).   
+    
    
 ### Example, sign-up scenario
 
