@@ -15,6 +15,7 @@
               fields:
                 - title
                 - slug
+                - url
                 - description
                 - hero_image
                 - author_ref
