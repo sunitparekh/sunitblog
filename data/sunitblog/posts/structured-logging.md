@@ -1,11 +1,11 @@
 ---
 tags: [software-development, logging]
 title: Structured Logging
-publish_datetime: 2014-07-01T00:00:07.0Z
-description: Logging is being followed in software development since long. How structured logging technique can be used not just for debugging, but for reporting, monitoring and alerting, performance benchmarking and in analytics as well.
+publish_datetime: 2015-07-13T00:00:07.0Z
+description: Logging is being followed in software development since long. Structured logging technique can be used not just for debugging, but for reporting, monitoring and alerting, performance benchmarking and in analytics as well.
 ---
 
-Distributed system architecture is kind of de-facto for complex systems. However, this brings in complexity of debugging, reporting, monitoring and benchmarking of overall system. It is quite difficult to know, what is the overall time to complete the transaction across systems. Debugging becomes difficult, when component failing is not the source of error. In such situations, structured logging can help. Here is, what to be followed while logging and how to setup infrastructure to achieve it.
+Logging is followed by almost every project in software development. Most of the time logging is done to achieve debugging and auditing. And in distributed system debugging becomes more complex e.g. when component failing is not the source of error, how the messages are passed from one component to another. However, there are lots of other aspect where logs could be really useful, such as monitoring & alerting, getting performance benchmarking, reporting & analytics. To achieve all of this, a technique in logging is followed called as structured logging also known as logging with context. Here is what we need to follow while logging to achieve structured logging and how we can use it.
  
 ## What is structured logging?
 *******
@@ -27,7 +27,7 @@ Above structured message is self explanatory and easy to parse and index. This i
 
 > **Unique identifier across systems for transaction tracking**
 >
-> Use unique identifier to connect logs of a single transaction across multiple systems. This is useful technique in debugging and performance monitoring transactions with distributed systems. This technique is useful for 'incident tracking'.
+> Use unique identifier to connect logs of a single transaction across multiple systems. This is useful technique in debugging and performance monitoring transactions with distributed systems. This technique is also useful for 'incident tracking'. 
 
 ## How to aggregate logs?
 *******
@@ -44,14 +44,14 @@ To achieve real time monitoring and alerting we can use `syslog` approach, direc
  
 ![Centralised Logging](/assets/sunitblog/posts/images/structured-logging/centralised-logging.svg){: .full-width} 
 
-> **Time on all application servers should be synced.** Since a milli-second differences can lead to confusion and errors.
+> In distributed systems it is important that we have realtime log aggregation setup. It is equally important that **time on all application servers should be in sync**. Since a millisecond differences can have unordered logs and leads to confusion and errors.
  
 ## Usage
 *******
 
 #### Debugging
 - We generate mongoDB slow running query report, which helps us to identify full table scans due to lack of indexes.  
-- 'Single unique identifier across system' can help debug incidents of eCommerce systems, like payment failure etc.
+- 'Unique identifier across systems for transaction tracking' can help debug incidents of eCommerce systems, like payment failure etc.
 
 #### Reporting
 - Log Servers like Splunk and LogEntries can generate nice reports with graphs, dashboards.  

@@ -1,13 +1,15 @@
 ---
 tags: [continuous-delivery, legacy-projects]
 title: Continuous Delivery on Legacy Projects
-publish_datetime: 2015-01-01T00:00:07.0Z            
-description: Post is to provide guideline on how to get started with Continuous Delivery on Legacy Projects and answer to "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't to where to start or we can't do agile". 
+publish_datetime: 2015-07-14T00:00:07.0Z            
+description: Post is to provide guideline on how to get started with Continuous Delivery on Legacy Projects. "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't to where to start or we can't do agile". 
 ---
 
-In my interactions with people, I hear "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't know where to start or we can't do agile and continuous delivery on our project". And this blog post is to provide some guideline on how get started step by step start practicing agile practices and achieve Continuous Delivery (CD).
+In my interactions with people, I hear "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't know where to start or we can't do agile and continuous delivery on our project". 
+
+Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp; framework resulting into long development and testing cycles. And now to solve these problems, following Agile practices is the only way. Following agile practices requires specialized skills like Test Driven Development, Refactoring and Evolutionary Design. And difficulty is where to start, there are so many agile engineering practices. 
  
-Now once you have decided that agile and CD is the way to go, I recommend following step by step approach to move towards CD with agile practices. It is a journey and can take upto years to achieve based on size of the project, so have patience.  
+Now once we have decided that agile and CD is the way to go, I recommend following step by step approach to move towards CD with agile practices. It is a journey and can take upto years to achieve based on size of the project, so have patience.  
 
 ## Step 1: Automated build and deployment
 
@@ -49,7 +51,7 @@ Once the 'Sanity automated tests' are ready lets put them to run on every check-
 
 **Tools and techniques for automated build**
 
-1. Perform headless website testing using [PhantomJS](http://phantomjs.org/headless-testing.html) in combination with [Jasmine](http://jasmine.github.io/) and [Testem](https://github.com/airportyh/testem). Other alternate is [Selenium](http://docs.seleniumhq.org/) or [Sahi](http://sahi.co.in/sahi-open-source/).
+1. Perform headless website testing using [PhantomJS](http://phantomjs.org/headless-testing.html) in combination with [Jasmine](http://jasmine.github.io/) and [Testem](https://github.com/airportyh/testem). Other alternatives are [Selenium](http://docs.seleniumhq.org/) and [Sahi](http://sahi.co.in/sahi-open-source/).
 
  
 > Same Sanity test suite can be run against all environments with different configurations and parameters. This helps in verification and confidence in our build and deployments in each environment.  
