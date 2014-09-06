@@ -61,35 +61,35 @@ With distributed and microservice architecture, it is quite natural to have logs
 Lets take the example of order request after successful payment.
 
 <pre class="code">
-timestamp="2014-07-22T18:12:27.100+0530" host=server01 tag=webServer
+timestamp="2014-07-22T18:12:27.100+0530" host=server01 tag=<span style="color:brown;">webServer</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>cientIP</b>=<span style="color:red;">83.84.85.86</span> <b>sessionId</b>=<span style="color:red;">123456789</span>
 <b>message</b>="Order confirmation request received"
 
-timestamp="2014-07-22T18:12:27.200+0530" host=server03 tag=orderService
+timestamp="2014-07-22T18:12:27.200+0530" host=server03 tag=<span style="color:brown;">orderService</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Order created"
 <b>orderAmount</b>=<span style="color:red;">550</span>
 
-timestamp="2014-07-22T18:12:27.250+0530" host=server03 tag=inventoryService
+timestamp="2014-07-22T18:12:27.250+0530" host=server03 tag=<span style="color:brown;">inventoryService</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Online inventory updated"
 
-timestamp="2014-07-22T18:12:27.300+0530" host=server07 tag=paymentService
+timestamp="2014-07-22T18:12:27.300+0530" host=server07 tag=<span style="color:brown;">paymentService</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Payment details stored against order."
 <b>paymentMode</b>=<span style="color:red;">CreditCard</span>
 
-timestamp="2014-07-22T18:12:27.350+0530" host=server05  tag=couponService
+timestamp="2014-07-22T18:12:27.350+0530" host=server05  tag=<span style="color:brown;">couponService</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Redeem coupon ABCDE marked for user."
 <b>couponType</b>=<span style="color:red;">REWARD</span> <b>couponCode</b>=<span style="color:red;">ABCDE</span>
 
-timestamp="2014-07-22T18:12:27.400+0530" host=server01 tag=webServer
+timestamp="2014-07-22T18:12:27.400+0530" host=server01 tag=<span style="color:brown;">webServer</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Request completed"
 
-timestamp="2014-07-22T18:12:28.500+0530" host=server06  tag=emailService
+timestamp="2014-07-22T18:12:28.500+0530" host=server06  tag=<span style="color:brown;">emailService</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Order email sent"
 
-timestamp="2014-07-22T18:12:27.450+0530" host=server05  tag=rewardService
+timestamp="2014-07-22T18:12:27.450+0530" host=server05  tag=<span style="color:brown;">rewardService</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> message="Reward points updated."
 
-timestamp="2014-07-22T18:15:00.100+0530" host=server25  tag=shippingService
+timestamp="2014-07-22T18:15:00.100+0530" host=server25  tag=<span style="color:brown;">shippingService</span>
 <b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Order received by shipment system."
 </pre>
 
@@ -146,7 +146,7 @@ Most of the products in this space provide their own agents, which runs on clien
 
 ![centralised aggregated logs](/assets/sunitblog/posts/images/structured-logging/centralised-logging.svg)
 
-In distributed systems it is important that we have realtime log aggregation setup. And it is equally important that time on all application servers is in sync. Since a millisecond differences can have unordered logs and leads to confusion and errors while debugging and reporting.
+> In distributed systems it is important that we have realtime log aggregation setup. And it is equally important that time on all application servers is in sync. Since a millisecond differences can have unordered logs and leads to confusion and errors while debugging and reporting.
 
 ## More usages
 
