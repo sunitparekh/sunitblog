@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-core.git
-  revision: 8b7b33d518764fe2a9d84d4f7412901f9a60d66c
+  revision: abf9c4c8da7b0be03e2bbf916b7f2c1362164e28
   specs:
     soupcms-core (0.5.0)
       bootstrap-sass
@@ -43,7 +43,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    bootstrap-sass (3.2.0.1)
+    bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     bson (1.10.2)
     bson_ext (1.10.2)
@@ -59,7 +59,7 @@ GEM
     puma (2.9.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
-    sass (3.4.1)
+    sass (3.4.3)
     slim (2.0.3)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
