@@ -5,7 +5,7 @@ publish_datetime: 2014-09-06T00:00:07.0Z
 description: Logging is being followed in software development since long. Structured logging provides meaning to logs and helps not only just for debugging, but for reporting, monitoring and alerting, performance benchmarking and in analytics as well.
 ---
 
-Logging is followed in almost every project. However, we end up using logs for most of the time debugging or auditing purpose. Since past few projects we have been exploring more opportunities for leveraging the usage of logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.
+Logging is followed in almost every project. However, most of the time we end up using logs for debugging or auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.
 
 Lets first look at what we need to follow while logging to achieve structured logging.
  
