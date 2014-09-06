@@ -2,7 +2,7 @@
 tags: [software-development, logging]
 title: Structured Logging
 publish_datetime: 2014-09-06T00:00:07.0Z
-description: Logging is being followed in software development since long. Structured logging technique can be used not just for debugging, but for reporting, monitoring and alerting, performance benchmarking and in analytics as well.
+description: Logging is being followed in software development since long. Structured logging provides meaning to logs and helps not only just for debugging, but for reporting, monitoring and alerting, performance benchmarking and in analytics as well.
 ---
 
 Logging is followed in almost every project. However, we end up using logs for most of the time debugging or auditing purpose. Since past few projects we have been exploring more opportunities for leveraging the usage of logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.
@@ -11,21 +11,22 @@ Lets first look at what we need to follow while logging to achieve structured lo
  
 ## What is structured logging?
 
-Not only log level is important, but what we log & how we log also matters. Log messages by default look like the following:
+Not only log level is important, but what we log & how we log also matters. Lets look at the default log message format,
  
-~~~
-127.0.0.1 [2014-07-22T18:12:27.200+0530] "GET /api/modules/doc_id/navigation HTTP/1.1" 200 476
-~~~ 
+<pre class="code">
+127.0.0.1 <b>[2014-07-22T18:12:27.200+0530]</b> "GET <b>/api/modules/doc_id/navigation</b> HTTP/1.1" <b>200</b> 476
+</pre>
 
-Above message is interpreted well by humans since we know, `120.0.0.1` is IP, `2014-07-22T18:12:27.200+0530` is timestamp, `GET` is request methods, `200` is response status and `476` is server response time. And such interpretation is required for each message logging. With a number of messages and different formats, it's difficult to parse and build indexes for such messages.
+Above message is interpreted well by humans since we know, `120.0.0.1` is IP, `2014-07-22T18:12:27.200+0530` is timestamp, `GET` is request methods, `200` is response status and `476` is server response time. And such interpretation is required for each message logging.
 
 Let's provide structure to the above log message,
 
-~~~
-ip="127.0.0.1" timestamp="2014-07-22T18:12:27.200+0530" method=GET url="/api/modules/doc_id/navigation" protocol=HTTP/1.1 status=200 responseTime=476
-~~~
-  
-Above structured message is self explanatory and easy to parse and index by systems. This technique of `key=value` style logging is also known as logging with context. Using above log message keys we can find all slow pages, by querying logs with `status = 200` and `responseTime > 2000`.
+<pre class="code">
+<b>ip</b>="127.0.0.1" <b>timestamp</b>="2014-07-22T18:12:27.200+0530" <b>method</b>=GET
+<b>url</b>="/api/modules/doc_id/navigation" <b>protocol</b>=HTTP/1.1 <b>status</b>=200 <b>responseTime</b>=476
+</pre>
+
+Above structured message is self explanatory and easy to parse and index by system. This technique of `key=value` style logging is also known as logging with context. Using above log message keys we can find all slow pages, by querying logs with `status = 200` and `responseTime > 2000`.
 
 Now lets take some examples of structured logs to understand it usage better.
 
@@ -38,9 +39,11 @@ Now lets take some examples of structured logs to understand it usage better.
 
 Most of the application now days have have background jobs running at regular interval. With following structured logging for each jobs,
 
-~~~
-timestamp="2014-07-22T18:12:27.200+0530" host=server20  tag=jobserver jobName=image_upload jobStartTime="2014-07-22T18:10:00.100+0530" jobEndTime="2014-07-22T18:12:27.100+0530" jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
-~~~
+<pre class="code">
+timestamp="2014-07-22T18:12:27.200+0530" host=server20  tag=jobserver <b style="color:blue;">jobName</b>=image_upload
+<b style="color:blue;">jobStartTime</b>="2014-07-22T18:10:00.100+0530" <b style="color:blue;">jobEndTime</b>="2014-07-22T18:12:27.100+0530"
+<b style="color:blue;">jobExecutionTime</b>=9840 <b style="color:blue;">jobStatus</b>=success <b style="color:blue;">noOfImageUploaded</b>=125
+</pre>
 
 following can be achieved,
 
@@ -57,25 +60,38 @@ With distributed and microservice architecture, it is quite natural to have logs
 
 Lets take the example of order request after successful payment.
 
-~~~
-timestamp="2014-07-22T18:12:27.100+0530" host=server01 tag=webServer transactionId=458748939 cientIP=83.84.85.86 sessionId=123456789  message="Order confirmation request received"
+<pre class="code">
+timestamp="2014-07-22T18:12:27.100+0530" host=server01 tag=webServer
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>cientIP</b>=<span style="color:red;">83.84.85.86</span> <b>sessionId</b>=<span style="color:red;">123456789</span>
+<b>message</b>="Order confirmation request received"
 
-timestamp="2014-07-22T18:12:27.200+0530" host=server03 tag=orderService transactionId=458748939 message="Order created" orderAmount=550
+timestamp="2014-07-22T18:12:27.200+0530" host=server03 tag=orderService
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Order created"
+<b>orderAmount</b>=<span style="color:red;">550</span>
 
-timestamp="2014-07-22T18:12:27.250+0530" host=server03 tag=inventoryService transactionId=458748939 message="Online inventory updated"
+timestamp="2014-07-22T18:12:27.250+0530" host=server03 tag=inventoryService
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Online inventory updated"
 
-timestamp="2014-07-22T18:12:27.300+0530" host=server07 tag=paymentService transactionId=458748939 message="Payment details stored against order." paymentMode=CreditCard
+timestamp="2014-07-22T18:12:27.300+0530" host=server07 tag=paymentService
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Payment details stored against order."
+<b>paymentMode</b>=<span style="color:red;">CreditCard</span>
 
-timestamp="2014-07-22T18:12:27.350+0530" host=server05  tag=couponService transactionId=458748939 message="Redeem coupon ABCDE marked for user." couponType=REWARD couponCode=ABCDE
+timestamp="2014-07-22T18:12:27.350+0530" host=server05  tag=couponService
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Redeem coupon ABCDE marked for user."
+<b>couponType</b>=<span style="color:red;">REWARD</span> <b>couponCode</b>=<span style="color:red;">ABCDE</span>
 
-timestamp="2014-07-22T18:12:27.400+0530" host=server01 tag=webServer transactionId=458748939 message="Request completed"
+timestamp="2014-07-22T18:12:27.400+0530" host=server01 tag=webServer
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Request completed"
 
-timestamp="2014-07-22T18:12:28.500+0530" host=server06  tag=emailService transactionId=458748939 message="Order email sent"
+timestamp="2014-07-22T18:12:28.500+0530" host=server06  tag=emailService
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Order email sent"
 
-timestamp="2014-07-22T18:12:27.450+0530" host=server05  tag=rewardService transactionId=458748939 message="Reward points updated."
+timestamp="2014-07-22T18:12:27.450+0530" host=server05  tag=rewardService
+<b>transactionId</b>=<span style="color:blue;">458748939</span> message="Reward points updated."
 
-timestamp="2014-07-22T18:15:00.100+0530" host=server25  tag=shippingService transactionId=458748939 message="Order received by shipment system."
-~~~
+timestamp="2014-07-22T18:15:00.100+0530" host=server25  tag=shippingService
+<b>transactionId</b>=<span style="color:blue;">458748939</span> <b>message</b>="Order received by shipment system."
+</pre>
 
 with above messages we can,
 

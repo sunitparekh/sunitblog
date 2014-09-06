@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-core.git
-  revision: abf9c4c8da7b0be03e2bbf916b7f2c1362164e28
+  revision: ff67b6ff55e2fab33896694a82bbb2128ce7e322
   specs:
     soupcms-core (0.5.0)
       bootstrap-sass
