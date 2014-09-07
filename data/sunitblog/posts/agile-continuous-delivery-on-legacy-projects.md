@@ -1,15 +1,17 @@
 ---
-tags: [continuous-delivery, legacy-projects]
-title: Continuous Delivery on Legacy Projects
-publish_datetime: 2015-07-14T00:00:07.0Z            
+tags: [agile, software-development, continuous-delivery]
+title: How to begin Agile and Continuous Delivery on Legacy Projects?
+publish_datetime: 2014-10-07T00:00:07.0Z
 description: Post is to provide guideline on how to get started with Continuous Delivery on Legacy Projects. "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't to where to start or we can't do agile". 
 ---
 
 In my interactions with people, I hear "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't know where to start or we can't do agile and continuous delivery on our project". 
 
-Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp; framework resulting into long development and testing cycles. And now to solve these problems, following Agile practices is the only way. Following agile practices requires specialized skills like Test Driven Development, Refactoring and Evolutionary Design. And difficulty is where to start, there are so many agile engineering practices. 
- 
-Now once we have decided that agile and CD is the way to go, I recommend following step by step approach to move towards CD with agile practices. It is a journey and can take upto years to achieve based on size of the project, so have patience.  
+Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp; framework resulting into long development and testing cycles. And to solve these problems, lots of team decides following Agile practices. Following agile practices requires specialized skills like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design... and difficulty is where to start, there are so many agile engineering practices.
+
+Should we start Big Bang, stop all development until we have CI, Automated Tests, ... everything in place.
+
+Now once we have decided that agile and CD is the way to go, here is step by step approach to move towards CD with agile practices which worked for me. Remember this is a journey and can take upto months or years to achieve based on size of the project, so have patience.
 
 ## Step 1: Automated build and deployment
 
@@ -18,12 +20,12 @@ On most of the legacy projects I have seen, taking build and performing deployme
 **Tools and techniques for automated build**
 
 - Packaging application in native format using tools like [FPM](https://github.com/jordansissel/fpm) to build RPM, DEB packages to deploy application in native way. For products this approach is ideal and we can leverage system default package manager for automated upgrade. And this quite common in applications distributions like Apache HTTP Server, JDK etc. 
-- Use Continuous Integration servers like [Go](http://www.go.cd/) to build artifacts.
+- Use Continuous Integration servers like [Go](http://www.go.cd/) to build artifacts and trigger deployment.
 - Use [Chef](http://www.getchef.com/chef/) to provision servers and deploy applications triggered via downstream pipelines in CI server.
 - Use [Flyway](http://flywaydb.org/) or [Liquibase](http://www.liquibase.org/) for running database migrations in incremental way.
 
 
-![simple deployment pipeline](/assets/sunitblog/posts/images/continuous-delivery-on-legacy-projects/simple-pipeline.svg){: .full-width}
+![simple deployment pipeline](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/simple-pipeline.svg){: .full-width}
 
 
 Next question comes in mind is, what should be the branching strategy? I recommend following 3 active branch strategy. 
@@ -34,7 +36,7 @@ Next question comes in mind is, what should be the branching strategy? I recomme
 
 
 
-![3 branch deployment pipeline](/assets/sunitblog/posts/images/continuous-delivery-on-legacy-projects/3-branch-pipeline.svg){: .col-md-9}
+![3 branch deployment pipeline](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/3-branch-pipeline.svg){: .col-md-9}
 {:full-width}
 
 
@@ -45,7 +47,7 @@ Doing automated deployment enables us to deploy any build at will even for small
 
 Building full automation suite to get good coverage for CD is long way to go. My suggestion here it start small, identify blocker or critical end user scenarios and write automated tests for just for those. Blocker means if this fails, end user is unable to use application or critical for business to continue. e.g. in retail website purchase workflow, search for product. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max. 
   
-![automated sanity test](/assets/sunitblog/posts/images/continuous-delivery-on-legacy-projects/automated-sanity-test.svg){: .full-width}
+![automated sanity test](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/automated-sanity-test.svg){: .full-width}
   
 Once the 'Sanity automated tests' are ready lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.  
 
@@ -64,7 +66,7 @@ Now the tough one. Big bang unit testing and refactoring is *big NO*. You need t
 
 I recommend baby steps again here, do refactoring and write unit tests only for features which are under development and touched for enhancement. Do not try to cover non-touched code. In case of Registration feature not changing, do not write unit tests or refactor code related to registration feature. 
 
-![automated unit test](/assets/sunitblog/posts/images/continuous-delivery-on-legacy-projects/automated-unit-test.svg){: .full-width}
+![automated unit test](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/automated-unit-test.svg){: .full-width}
 
 > Do progressive refactoring and test coverage for code under heavy development, do just enough for others. In short invest more in changing codebase and less in dead code.  
 
@@ -75,7 +77,7 @@ I recommend baby steps again here, do refactoring and write unit tests only for 
 4. Now make enhancements either by following test first or test last approach.
 5. If needed, do refactoring of the code you just wrote before you call it done.
 
-Watch Martin Flower's refactoring technique with changing hats approach and apply to above steps as well.
+Watch Martin Flower's [Workflow of Refactoring](https://www.youtube.com/watch?v=vqEg37e4Mkw) to learn more.
  
 ### Test last to test first journey
 
@@ -101,14 +103,21 @@ Most of the time team ask me, Code and Design level refactoring we are able to d
 4. Move service as separate independent deployment, but deploy on same box, make localhost calls
 5. Make service totally independent as you would liked it to be, make remote calls
 
-Above steps can take weeks or months based on the complexity and size. My guideline is to divide into steps that you could complete within one iteration, so that you keep it green and always running. 
+Above steps can take weeks or months based on the complexity and size. My guideline is to divide into steps that you could complete within one iteration, so that you keep it green and always running.
 
-## Support needed during CD journey         
+> Above steps can be done simultaneously without any restrictions. This is just a guideline and feel free to try different approaches that works for you and your team.
 
-- Have a coach, internal or external within team who mentors team on above journey. It is important that someone constantly looking at how are we progressing on CD journey? Are we getting benefits? Is team getting enough support to adopt new way of development? Run retrospective, just on CD progress as health check?
+## Support needed during CD journey
+
+During the agile adoption journey it is important that team gets required support in terms of,
+
+- Team needs necessary initial training and coaching on Agile practices like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design...
+- Have a coach, internal or external, who mentors team on Agile adoption journey. It is important that someone constantly looking at how are team is progressing on CD journey? Is team getting benefits? Is team getting enough support to adopt new way of development?
 - All stakeholder needs to understand that during this journey initially when team is learning, refactoring & building automated test suites, it might take little longer to deliver. However after sometime trend should shift and start showing benefits with quicker & quality deliveries.
-   
 
+> Run regular retrospective on Agile adoption and CD progress as health check.
+
+Please share your experience with Agile adoption on legacy project and challenges faced using comments.
    
 
 
