@@ -9,6 +9,8 @@ Logging is followed in almost every project. However, most of the time we end up
 
 Lets first look at what we need to follow while logging to achieve structured logging.
  
+
+
 ## What is structured logging?
 
 Not only log level is important, but what we log & how we log also matters. Lets look at the default log message format,

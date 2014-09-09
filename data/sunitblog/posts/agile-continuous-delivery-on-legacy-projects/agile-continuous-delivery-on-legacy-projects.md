@@ -13,6 +13,8 @@ Should we start Big Bang, stop all development until we have CI, Automated Tests
 
 Now once we have decided that agile and CD is the way to go, here is step by step approach to move towards CD with agile practices which worked for me. Remember this is a journey and can take upto months or years to achieve based on size of the project, so have patience.
 
+
+
 ## Step 1: Automated build and deployment
 
 On most of the legacy projects I have seen, taking build and performing deployment is quite long process. And one of the reason for this is all steps are manual and long downtime to systems (environments). If we notice all the steps we do to build artifacts and perform deployment are recitative and can be automated using scripts. In case of products we should have automated upgrades for client and distribution channel.  
