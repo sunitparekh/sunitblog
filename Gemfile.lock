@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-cli.git
-  revision: 9f1c9c1a4e2b727070a32d373815378d3c5681d3
+  revision: 65949ac93f9616c76d848388b571948c1de7cb0b
   specs:
     soupcms-cli (0.5.4)
       bson_ext (~> 1.10)
