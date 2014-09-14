@@ -2,7 +2,8 @@
 tags: [agile, software-development, continuous-delivery]
 title: How to begin Agile and Continuous Delivery on Legacy Projects?
 publish_datetime: 2014-10-07T00:00:07.0Z
-description: Post is to provide guideline on how to get started with Continuous Delivery on Legacy Projects. "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't to where to start or we can't do agile". 
+description: Post is to provide guideline on how to get started with Continuous Delivery on Legacy Projects. "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't to where to start or we can't do agile".
+authors: ["ref:authors:sunitparekh"]
 ---
 
 In my interactions with people, I hear "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't know where to start or we can't do agile and continuous delivery on our project". 

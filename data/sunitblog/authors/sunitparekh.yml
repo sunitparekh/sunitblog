@@ -1,0 +1,25 @@
+---
+  doc_id: sunitparekh
+
+  name: <a href="http://www.sunitparekh.in">Sunit Parekh</a>
+
+  bio:
+    - Application Developer
+    - ThoughtWorks
+    - Pune, India
+
+  projects:
+    -
+     url: http://www.soupcms.com
+     title: soupCMS
+    -
+     url: http://sunitparekh.github.io/data-anonymization/
+     title: Data Anonymization
+
+  thumbnail: http://www.gravatar.com/avatar/f40c60ffb60255ae89e75ccbb8eb303c.png
+
+  email: parekh.sunit@gmail.com
+
+  twitter_handle: sunitparekh
+  github_username: sunitparekh
+
