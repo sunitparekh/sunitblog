@@ -23,11 +23,11 @@ Topics to broadly cover during session are,
 
 We created a timeline on the board to start the session with first talking about what is story and story lifecycle.
 
-![communication plan empty](/assets/sunitblog/posts/images/distributed-team-communication/anatomy-of-iteration-1.jpg)
+![communication plan empty](ref:images:posts/distributed-team-communication/anatomy-of-iteration-1.jpg)
 
 As we kept discussing about the iteration, we started moving story stages onto iteration lifecycle. Also started building the events as shown in the picture below. Session took an hour to run.
 
-![communication plan with iteration lifecycle](/assets/sunitblog/posts/images/distributed-team-communication/anatomy-of-iteration-2.jpg)
+![communication plan with iteration lifecycle](ref:images:posts/distributed-team-communication/anatomy-of-iteration-2.jpg)
 
 Keep most of the stickies written before the session. This helps to remember all points to cover and running the session quickly. Have discussions during the session and make it as interactive as possible. As a team decides most of the stuff (e.g. definition of story done, iteration length, meetings/calls, Skype or Google Hangout) rather than dictating to others, this is very important as that makes it team's plan.
 

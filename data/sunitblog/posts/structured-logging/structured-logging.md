@@ -111,7 +111,7 @@ Leverage apache `mod_unique_id` module to generate transaction id at web server 
 
 **Lets find 404s on website using Splunk**
 
-![splunk query for finding 404](/assets/sunitblog/posts/images/structured-logging/splunk-query.png){: .full-width}
+![splunk query for finding 404](ref:images:posts/structured-logging/splunk-query.png){: .full-width}
 
 Query: `tag=production sourcetype=nginx-access GET 404 | rex "\"GET (?<url>\S*) " | stats count by url | sort -count | head 20`
 
@@ -146,7 +146,7 @@ To achieve real time monitoring and alerting we can use syslog approach, directl
 
 Most of the products in this space provide their own agents, which runs on client and sends logs real-time to central log server. e.g. [Splunk](http://wiki.splunk.com/Community:Getting_data_into_Splunk), [LogEntries](https://logentries.com/doc/forwarders/) etc. There are specific tools available just for aggregation purposes like [Apache Flume](http://flume.apache.org/).
 
-![centralised aggregated logs](/assets/sunitblog/posts/images/structured-logging/centralised-logging.svg)
+![centralised aggregated logs](ref:images:posts/structured-logging/centralised-logging.svg)
 
 > In distributed systems it is important that we have realtime log aggregation setup. And it is equally important that time on all application servers is in sync. Since a millisecond differences can have unordered logs and leads to confusion and errors while debugging and reporting.
 

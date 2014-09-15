@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/soupcms/soupcms-common.git
-  revision: 19127cfc5eb23f0035666b7a48426aacfb7d7f4d
+  revision: aaedd7ec8070b4b5b55b21b0edd94ece8fe4b491
   specs:
     soupcms-common (0.5.0)
 
@@ -44,9 +44,9 @@ GEM
     aws_cf_signer (0.1.3)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
-    bson (1.10.2)
-    bson_ext (1.10.2)
-      bson (~> 1.10.2)
+    bson (1.11.1)
+    bson_ext (1.11.1)
+      bson (~> 1.11.1)
     cloudinary (1.0.76)
       aws_cf_signer
       rest-client
@@ -55,8 +55,8 @@ GEM
     kramdown (1.4.1)
     mime-types (2.3)
     mini_portile (0.6.0)
-    mongo (1.10.2)
-      bson (= 1.10.2)
+    mongo (1.11.1)
+      bson (= 1.11.1)
     netrc (0.7.7)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
@@ -66,7 +66,7 @@ GEM
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.4.3)
+    sass (3.4.4)
     slim (2.0.3)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)

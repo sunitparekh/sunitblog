@@ -24,7 +24,7 @@ For understanding product and its family and how they differ from each other, we
 3.3 Numbers related to product, such as revenue, time factors etc.
 4. Start with most popular product first and considering it as the base, discuss the variations in other products in the same family. Put notes on small stickies for each variation discovered.
 
-![product map](/assets/sunitblog/posts/images/product-map/product-map.jpg)
+![product map](ref:images:posts/product-map/product-map.jpg)
 
 ### Variation
 

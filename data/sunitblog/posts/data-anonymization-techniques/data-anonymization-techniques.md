@@ -7,7 +7,7 @@ description: In this post I describe the two techniques used for data anonymizat
 
 Continuation of my [previous post](/posts/data-anonymization-techniques) about the need for anonymized production data dump, here is more details on two anonymization approaches blacklist and whitelist. Lets take one simple example and understand both the approaches. Consider two tables of database: Customers and Config.
 
-![sample data set](/assets/sunitblog/posts/images/data-anonymization-techniques/sample-data.png)
+![sample data set](ref:images:posts/data-anonymization-techniques/sample-data.png)
 
 
 ## Blacklist
@@ -17,7 +17,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 
 Considering above example. Lets anonymize data using blacklist approach. In above we want to anonymize Customers.Name and Customers.Email, so that we can not identify user. After anonymization the data will look like following.
 
-![data set after blacklist](/assets/sunitblog/posts/images/data-anonymization-techniques/blacklist.png)
+![data set after blacklist](ref:images:posts/data-anonymization-techniques/blacklist.png)
 
 Look at the Age field and config table, they remained as is.  That is, apart from data specified in anonymization rules, all other data remains as is after anonymization. This could be a data security issue. Such as when new fields are added they will not be anonymized by default. Human error in missing any users personal data could be damaging.
 
@@ -27,7 +27,7 @@ This approach, by default scrambles/anonymizes all fields except a list of field
 
 Using whitelist approach and applying similar rules to anonymize only Name and Email for above example will produce output like following.
 
-![data set after whitelist](/assets/sunitblog/posts/images/data-anonymization-techniques/whitelist.png)
+![data set after whitelist](ref:images:posts/data-anonymization-techniques/whitelist.png)
 
 Age field value is anonymized. Which means if u haven't specified any rule for anonymization the system should anonymize it using default anonymization rules for the data type. To get Age field as-is it is required to mention it as whitelist. Also, the config table didn't show up at all, means if I don't ask for the table explicitly it should not be copied at all.
 

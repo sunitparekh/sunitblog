@@ -7,7 +7,7 @@ description: I have been working on NoSQL database had some interesting learning
 
 I have been working on NoSQL database had some interesting learning on when not to use NoSQL database. All following learning are based on my NoSQL experience with mongoDB. This is an ongoing document which I am planning to keep updating as I keep learning.
 
-![mongodb](/assets/sunitblog/posts/images/nosql-learning-n-gotchas/mongodb-logo.png)
+![mongodb](ref:images:posts/nosql-learning-n-gotchas/mongodb-logo.png)
 
 ### When NOT to choose NoSQL database
 

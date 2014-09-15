@@ -11,7 +11,7 @@ Also we had few bugs manifesting themselves only in production and we were not a
 
 One other time, we had issues with our migration scripts, when the migration script failed during production release. The reason was again the kind of data that had evolved in the production system. It could have been avoided if we had a production dump to rehearse the production deployment.
 
-![Why data anonymization](/assets/sunitblog/posts/images/data-anonymization/data-anonymization.png)
+![Why data anonymization](ref:images:posts/data-anonymization/data-anonymization.png)
 
 Considering all the above hurdles, we got together our Product Owner, and the Dev ops and Security team mates for a production dump. The initial reaction was a NO: the primary reason it being 'Users' Personal Data' and according to Data Protection Act "No one should have access to users personal data". Now what? the answer was, we can get production dataset if we sanitize/mask/anonaymize users personal data, we can get the data from production. We quickly started googling around to findout is there a quick and easy tool available to achieve anonymization of the database. Hmm.... no luck.
 
@@ -19,7 +19,7 @@ Considering distributed teams spanning out of country, concern of security with 
 
 We thought lets write some scripts and anonymize production data. However, it has some serious security and data protection issues. Such as there is possiblity of missing out on certain attributes at all and those data slips into non production environments. Also it has issues with new content gets passed into non production as is without anonymization by default. There are two techniques for anonymization blacklist and whitelist.
 
-![Data anonymization techniques](/assets/sunitblog/posts/images/data-anonymization/data-anonymization-techniques.png)
+![Data anonymization techniques](ref:images:posts/data-anonymization/data-anonymization-techniques.png)
 
 As this is quite a common requirement across projects, I started working on this idea with a few colleagues at ThoughtWorks to build a simple tool in Ruby based on ActiverRecord to support multiple databases.
 

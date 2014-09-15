@@ -15,17 +15,17 @@ The process map was built on a large canvas/wall, so that it would constantly be
 
 **Stage 1**: After couple of session with business first cut of the as-is process timeline map looked something like this
 
-![process timeline map as is stage 1](/assets/sunitblog/posts/images/process-timeline-map/process-timeline-map-as-is-stage1.jpg )
+![process timeline map as is stage 1](ref:images:posts/process-timeline-map/process-timeline-map-as-is-stage1.jpg )
 
 **Stage 2**: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders' minds. It also had functional area clearly called out.
 
-![process timeline map as is](/assets/sunitblog/posts/images/process-timeline-map/process-timeline-map-as-is.jpg )
+![process timeline map as is](ref:images:posts/process-timeline-map/process-timeline-map-as-is.jpg )
 
 Advantage of having large visible canvas for the current as-is model is that it provided us a reference point at all times in inception. It became one of the living document for the team.
 
 **Stage 3**: We then took this forward and mapped the future to-be process on top of it by putting magic chart in-between.
 
-![process timeline map to be](/assets/sunitblog/posts/images/process-timeline-map/process-timeline-map-to-be.jpg )
+![process timeline map to be](ref:images:posts/process-timeline-map/process-timeline-map-to-be.jpg )
 
 Being able to superimpose the potential 'to-be' process on top of the 'as-is' process allowed everyone to be able to 'see' how it was lighter weight in comparison. It also allowed us to ensure and double check that we were indeed covering the key activities / steps from the current process and losing / getting rid of only the non value adding ones.
 

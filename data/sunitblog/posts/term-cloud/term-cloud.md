@@ -18,7 +18,7 @@ Our team came with an idea to play 'term cloud' as one of the exercise during th
 **Preparation**: Prepare board having 'Term Cloud' written on it with few samples.
 
 
-![term cloud](/assets/sunitblog/posts/images/term-cloud/term-cloud.jpg)
+![term cloud](ref:images:posts/term-cloud/term-cloud.jpg)
 
 
 ### How to execute
@@ -31,7 +31,7 @@ Our team came with an idea to play 'term cloud' as one of the exercise during th
 6. If different terms has same meaning, club them together.
 7. If same terms has multiple meaning, come up with new term for less used meaning.
 
-![term cloud sample](/assets/sunitblog/posts/images/term-cloud/term-cloud-sample.jpg)
+![term cloud sample](ref:images:posts/term-cloud/term-cloud-sample.jpg)
 
 ### Variations
 

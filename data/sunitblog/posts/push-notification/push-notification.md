@@ -13,7 +13,7 @@ We discussed multiple approach and chose one for development.
 
 This is kind of classical pull approach where every 'n' second poll for changes and update UI. The problem with polling every 30 sec were,
 
-![poll for changes](/assets/sunitblog/posts/images/push-notification/poll.png)
+![poll for changes](ref:images:posts/push-notification/poll.png)
 
 1. Unnecessary extra load on the server means fake http requests, 1 will have new message out of 100+ requests. Major hurdle in scaling app, suddenly the no of requests on server will increase multiple fold.
 2. Delay in data refresh based on poll frequency and it won't be realtime.
@@ -25,7 +25,7 @@ Approach may be okay for sites like live cricket scores where requests can be ht
 
 Second approach we came up with was push messages using websockets and libraries like socket.io etc.  Using push the user experience is really awesome, user gets notified instantaneously about the new messages. No extra fake requests on the server and helps in scaling easily.
 
-![push for changes](/assets/sunitblog/posts/images/push-notification/push.png)
+![push for changes](ref:images:posts/push-notification/push.png)
 
 However, there are challenges
 
@@ -37,7 +37,7 @@ To overcome over challenges we though of going to PaaS for Push Notification lik
 
 ## Approach 3: Push notification for changes
 
-![push notify for changes](/assets/sunitblog/posts/images/push-notification/push-notify.png)
+![push notify for changes](ref:images:posts/push-notification/push-notify.png)
 
 To overcome the problem of data security we came with the tweaked approach as shown above. We use PaaS for Push Notification only to notify end user about there is new message and no data. When the notification is received we do the poll request on main server to refresh the UI.
 

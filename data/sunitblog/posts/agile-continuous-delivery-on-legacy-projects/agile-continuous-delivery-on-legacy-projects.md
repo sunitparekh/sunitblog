@@ -28,7 +28,7 @@ On most of the legacy projects I have seen, taking build and performing deployme
 - Use [Flyway](http://flywaydb.org/) or [Liquibase](http://www.liquibase.org/) for running database migrations in incremental way.
 
 
-![simple deployment pipeline](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/simple-pipeline.svg){: .full-width}
+![simple deployment pipeline](ref:images:posts/images/agile-continuous-delivery-on-legacy-projects/simple-pipeline.svg){: .full-width}
 
 
 Next question comes in mind is, what should be the branching strategy? I recommend following 3 active branch strategy. 
@@ -39,7 +39,7 @@ Next question comes in mind is, what should be the branching strategy? I recomme
 
 
 
-![3 branch deployment pipeline](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/3-branch-pipeline.svg){: .col-md-9}
+![3 branch deployment pipeline](ref:images:posts/images/agile-continuous-delivery-on-legacy-projects/3-branch-pipeline.svg){: .col-md-9}
 {:full-width}
 
 
@@ -50,7 +50,7 @@ Doing automated deployment enables us to deploy any build at will even for small
 
 Building full automation suite to get good coverage for CD is long way to go. My suggestion here it start small, identify blocker or critical end user scenarios and write automated tests for just for those. Blocker means if this fails, end user is unable to use application or critical for business to continue. e.g. in retail website purchase workflow, search for product. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max. 
   
-![automated sanity test](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/automated-sanity-test.svg){: .full-width}
+![automated sanity test](ref:images:posts/images/agile-continuous-delivery-on-legacy-projects/automated-sanity-test.svg){: .full-width}
   
 Once the 'Sanity automated tests' are ready lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.  
 
@@ -69,7 +69,7 @@ Now the tough one. Big bang unit testing and refactoring is *big NO*. You need t
 
 I recommend baby steps again here, do refactoring and write unit tests only for features which are under development and touched for enhancement. Do not try to cover non-touched code. In case of Registration feature not changing, do not write unit tests or refactor code related to registration feature. 
 
-![automated unit test](/assets/sunitblog/posts/images/agile-continuous-delivery-on-legacy-projects/automated-unit-test.svg){: .full-width}
+![automated unit test](ref:images:posts/images/agile-continuous-delivery-on-legacy-projects/automated-unit-test.svg){: .full-width}
 
 > Do progressive refactoring and test coverage for code under heavy development, do just enough for others. In short invest more in changing codebase and less in dead code.  
 

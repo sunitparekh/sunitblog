@@ -7,7 +7,7 @@ description: On most of the projects we just talk and talk about which language 
 
 I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).
 
-![code distribution metrics](/assets/sunitblog/posts/images/programming-language/code-distribution-metrics.png)
+![code distribution metrics](ref:images:posts/programming-language/code-distribution-metrics.png)
 
 <small>* numbers are pure production code and does not include test code</small>
 

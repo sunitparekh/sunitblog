@@ -9,19 +9,19 @@ Lots of time when I discuss Responsive Web Design (RWD), sometime I find out tha
 
 The multiple screen resolution problem is not new, even in old days the monitors had  different screen resolution. The problem exist from old days. In first attempt we solved multiple screen resolution problem with Fixed Width web page design (Fixed Width Layout Approach).  960px based fixed width design were very common for websites. One of the most popular CSS framework with fixed width was blueprint. The problem with fixed-width layout is white (empty) space on side of the screens. Designer also used that space by having creative backgrounds for the page.
 
-![Cricinfo fix-width web pages](/assets/sunitblog/posts/images/why-responsive-web-design/cricinfo-white-space.png)
+![Cricinfo fix-width web pages](ref:images:posts/why-responsive-web-design/cricinfo-white-space.png)
 {: .left .col-md-6 .shadow}
 
-![Apple fix-width web pages](/assets/sunitblog/posts/images/why-responsive-web-design/apple-with-white-space.png)
+![Apple fix-width web pages](ref:images:posts/why-responsive-web-design/apple-with-white-space.png)
 {: .left .col-md-6 .shadow}
 
 The multiple screen resolution problem didn't go away, after smartphones and tablets the problem became more prominent. In second attempt to solve the problem, used multiple templates for different devices on server side (Seperate Mobile Website Approach). The downside of using the server side device specific templating is that, HTTP caching can't be done. Which is non-negociable for scalability, and to overcome caching issues, on first request the application server recognises the browser agent and redirects the site to device specific page like www.cricinfo.com or m.cricinfo.com By using different sites/urls for different devices  HTTP caching problem was solved.
 {: .clear}
 
-![Cricinfo fix-width web pages](/assets/sunitblog/posts/images/why-responsive-web-design/cricinfo-white-space.png)
+![Cricinfo fix-width web pages](ref:images:posts/why-responsive-web-design/cricinfo-white-space.png)
 {: .left .col-md-6 .shadow}
 
-![Cricinfo mobile redirect web page](/assets/sunitblog/posts/images/why-responsive-web-design/cricinfo-mobile-redirect.png)
+![Cricinfo mobile redirect web page](ref:images:posts/why-responsive-web-design/cricinfo-mobile-redirect.png)
 {: .left .col-md-6 .shadow}
 
 Try visiting page: [guardian.com](http://www.guardian.com) and [cricinfo.com](http://www.cricinfo.com) on mobile device and notice the redirect.
@@ -32,10 +32,10 @@ Now the problem started with maintaining multiple sites/applications. Use experi
 During same time period people realised that we are wasting so much screen real estate by doing the fixed grid layout, and the [fluid grid](http://fluidgrids.com/) layout design started becoming popular for desktops.
 
 
-![Fluid grid desktop web page](/assets/sunitblog/posts/images/why-responsive-web-design/fluid-grid-layout.png)
+![Fluid grid desktop web page](ref:images:posts/why-responsive-web-design/fluid-grid-layout.png)
 {: .left .col-md-6 .shadow}
 
-![Fluid grid mobile web page](/assets/sunitblog/posts/images/why-responsive-web-design/fluid-grid-layout-mobile.png)
+![Fluid grid mobile web page](ref:images:posts/why-responsive-web-design/fluid-grid-layout-mobile.png)
 {: .left .col-md-6 .shadow}
 
 However, fluid grid system depends heavily on browser support and performance. Making it old browser compatible was a big task.
@@ -43,10 +43,10 @@ However, fluid grid system depends heavily on browser support and performance. M
 
 The latest attempt of providing best viewing experience on all devices & screen resolution at client side (browsers) is known as Responsive Web Design.  With frameworks like [Twitter Bootstrap](http://twitter.github.com/bootstrap/),  it has become easy to get started learning and using Responsive Web Design concept.
 
-![Bootstrap desktop web page](/assets/sunitblog/posts/images/why-responsive-web-design/bootstrap-desktop.png)
+![Bootstrap desktop web page](ref:images:posts/why-responsive-web-design/bootstrap-desktop.png)
 {: .left .col-md-6 .shadow}
 
-![Bootstrap mobile web page](/assets/sunitblog/posts/images/why-responsive-web-design/bootstrap-mobile.png)
+![Bootstrap mobile web page](ref:images:posts/why-responsive-web-design/bootstrap-mobile.png)
 {: .left .col-md-6 .shadow}
 
 Notice menu, text, links and buttons in above two screenshots. Same site visited in desktop browser and mobile browser.
