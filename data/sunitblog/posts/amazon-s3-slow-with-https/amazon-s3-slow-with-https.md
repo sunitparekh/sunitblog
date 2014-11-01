@@ -9,7 +9,7 @@ On our site we have lots of images thumbnail getting served on HTTPS by Amazon S
 
 We tried following load test on S3 and the results helped us making decision.
 
-![amazon s3 performance issue with serving images over HTTPS](ref:images:posts/amazon-s3-slow-with-https/s3-mindmap.png)
+![amazon s3 performance issue with serving images over HTTPS](ref:images:posts/amazon-s3-slow-with-https/amazon-s3-slow-with-https.png)
 
 
 ### Conclusion:

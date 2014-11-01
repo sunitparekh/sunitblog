@@ -4,6 +4,8 @@ require 'sprockets'
 require 'soupcms/core'
 require 'soupcms/api'
 
+ENV['CLOUDINARY_BASE_URL'] = '//res.cloudinary.com/sunitparekh/image/upload/'
+
 if ENV['RACK_ENV'] == 'production'
   SoupCMS::Common::Util::HttpCacheStrategy.default_max_age = 3600
 end
@@ -14,11 +16,11 @@ SoupCMS::Common::Strategy::Application::SingleApp.configure do |app|
   if ENV['RACK_ENV'] == 'production'
     puts "HOST_NAME environment: #{ENV['HOST_NAME']}"
     prod_host = ENV['HOST_NAME'] || 'www.sunitparekh.in'
-    app.soupcms_api_url = "http://#{prod_host}/api"
-    app.app_base_url = "http://#{prod_host}/"
+    app.soupcms_api_url = "//#{prod_host}/api"
+    app.app_base_url = "//#{prod_host}/"
   else
     app.soupcms_api_url = 'http://localhost:9292/api'
-    app.app_base_url = 'http://localhost:9292/'
+    app.app_base_url = '//localhost:9292/'
   end
 
 end
@@ -37,12 +39,6 @@ map '/assets' do
   sprockets = SoupCMSCore.config.sprockets
   sprockets.append_path PUBLIC_DIR
   sprockets.append_path SoupCMS::Core::Template::Manager::DEFAULT_TEMPLATE_DIR
-  Sprockets::Helpers.configure do |config|
-    config.environment = sprockets
-    config.prefix = '/assets'
-    config.public_path = nil
-    config.digest = true
-  end
   run sprockets
 end
 
