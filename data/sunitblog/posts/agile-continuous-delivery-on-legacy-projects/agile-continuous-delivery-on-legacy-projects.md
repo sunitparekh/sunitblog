@@ -8,17 +8,17 @@ authors: ["ref:authors:sunitparekh"]
 
 In my interactions with people, I hear "Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don't know where to start or we can't do agile and continuous delivery on our project". 
 
-Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp; framework resulting into long development and testing cycles. And to solve these problems, lots of team decides following Agile practices. Following agile practices requires specialized skills like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design... and difficulty is where to start, there are so many agile engineering practices.
+Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices. Following agile practices requires specialized skills like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design... and difficulty is where to start, there are so many agile engineering practices.
 
 Should we start Big Bang, stop all development until we have CI, Automated Tests, ... everything in place.
 
-Now once we have decided that agile and CD is the way to go, here is step by step approach to move towards CD with agile practices which worked for me. Remember this is a journey and can take upto months or years to achieve based on size of the project, so have patience.
+Now once we have decided that agile and CD is the way to go, here is step by step approach which worked for me to move towards CD with agile practices. Remember this is a journey and can take upto months or years to get results, based on size of the project, so have patience.
 
 
 
 ## Step 1: Automated build and deployment
 
-On most of the legacy projects I have seen, taking build and performing deployment is quite long process. And one of the reason for this is all steps are manual and long downtime to systems (environments). If we notice all the steps we do to build artifacts and perform deployment are recitative and can be automated using scripts. In case of products we should have automated upgrades for client and distribution channel.  
+On most of the legacy projects I have seen, taking build and performing deployment is quite long process. One of the main reason for long cycle is, build and deployment steps are manual, resulting into long downtime for systems (environments) during deployment. If we notice all the steps we do for building artifacts and performing deployment are repetitive and can be automated using scripts. In case of product we can have automated upgrades for client with proper distribution channel.
 
 **Tools and techniques for automated build**
 
