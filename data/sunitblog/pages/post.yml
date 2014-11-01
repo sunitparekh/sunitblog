@@ -43,6 +43,7 @@
               model: posts
               fields: 
                 - title
+                - url
                 - slug
               limit: 10
               return: articles
