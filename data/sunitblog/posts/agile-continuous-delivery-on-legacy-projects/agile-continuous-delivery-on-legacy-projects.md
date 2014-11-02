@@ -20,7 +20,7 @@ On most of the legacy projects I have seen, taking build and performing deployme
 
 **Tools and techniques for automated build**
 
-- Packaging application in native format using tools like [FPM](https://github.com/jordansissel/fpm) to build RPM, DEB packages to deploy application in native way. For products this approach is ideal and we can leverage system default package manager for automated upgrade. And this quite common in applications distributions like Apache HTTP Server, JDK etc. 
+- Packaging application in native format using tools like [FPM](https://github.com/jordansissel/fpm) to build RPM, DEB packages to deploy application in native way. For products this approach is ideal and we can leverage system default package manager for automated upgrade. And this is quite common in applications distributions like Apache HTTP Server, JDK etc. 
 - Use Continuous Integration servers like [Go](http://www.go.cd/) to build artifacts and trigger deployment.
 - Use [Chef](http://www.getchef.com/chef/) to provision servers and deploy applications triggered via downstream pipelines in CI server.
 - Use [Flyway](http://flywaydb.org/) or [Liquibase](http://www.liquibase.org/) for running database migrations in incremental way.
@@ -46,18 +46,18 @@ Doing automated deployment enables us to deploy any build at will even for small
 
 ## Step 2: Automated sanity test suite
 
-Building full automation suite to get good coverage for CD is long way to go. My suggestion here it start small, identify blocker or critical end user scenarios and write automated tests for just for those. Blocker means if this fails, end user is unable to use application or critical for business to continue. e.g. in retail website purchase workflow, search for product. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max. 
+Building full automation suite to get good coverage for CD is long way to go. My suggestion here is to start small, identify blockers or critical end user scenarios and write automated tests just for those. Blocker means if something fails then end user is unable to use application and critical for business to continue. e.g. in retail website, credit card payment not working in purchase workflow. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max. 
   
 ![automated sanity test](ref:images:posts/agile-continuous-delivery-on-legacy-projects/images/automated-sanity-test.svg){: .full-width}
   
-Once the 'Sanity automated tests' are ready lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.  
+Once the 'Sanity automated tests' are ready, lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.  
 
 **Tools and techniques for automated build**
 
 1. Perform headless website testing using [PhantomJS](http://phantomjs.org/headless-testing.html) in combination with [Jasmine](http://jasmine.github.io/) and [Testem](https://github.com/airportyh/testem). Other alternatives are [Selenium](http://docs.seleniumhq.org/) and [Sahi](http://sahi.co.in/sahi-open-source/).
 
  
-> Same Sanity test suite can be run against all environments with different configurations and parameters. This helps in verification and confidence in our build and deployments in each environment.  
+> Same Sanity test suite can be run against all environments with different configurations and parameters. This helps in verifying and building confidence in our builds and deployments in each environment.  
 
 Evolve automated sanity test suite to achieve acceptance test suite with more End-2-End type of tests. However, please make sure you follow [Test Pyramid](http://martinfowler.com/bliki/TestPyramid.html) 
  
@@ -82,13 +82,13 @@ Watch Martin Flower's [Workflow of Refactoring](https://www.youtube.com/watch?v=
  
 ### Test last to test first journey
 
-Lots of time I realise that team is not familiar with the xUnit frameworks and not written any unit tests in past. Have patience, give them space to learn how to write effective unit test, learn good practices and patterns in unit testing. Let them start with test last and slowly move them towards test first journey. Since we are looking at legacy project here we are doing test last anyways. Even if you are following test last do one change to code and write test, do not wait for everything to finish and then write all tests.
+Lots of time I realise that team is not familiar with the xUnit frameworks and not written any unit tests in past. Have patience, give them space to learn how to write effective unit test, learn good practices and patterns in unit testing. Let them start with test last and slowly move them towards test first journey. Since we are looking at legacy project here we are doing test last anyways. Even if you are following test last, do one change to code and write test, do not wait for everything to finish and then write all tests.
 
 ### Three levels of refactoring
 
 #### Code level refactoring
 
-This is first level of refactoring that each and every team member should do ruthlessly. Such better naming, smaller methods, ...
+This is first level of refactoring that each and every team member should do ruthlessly. Such as better naming, smaller methods, ... etc 
  
 #### Design level refactoring
 
