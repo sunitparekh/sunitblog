@@ -1,0 +1,28 @@
+---
+  slug: home
+  title: Sunit Parekh's blog space sharing technical & agile experience - sUnit blog space
+  seo:
+    description: Sunit Parekh's blog space sharing technical & agile experience
+  areas:
+    -
+      name: body
+      modules:
+        -
+          recipes:
+            -
+              type: soupcms-api
+              model: posts
+              fields:
+                - title
+                - slug
+                - url
+                - description
+                - hero_image
+                - author_ref
+                - tags
+                - publish_datetime
+              limit: 0
+              return: articles
+          template:
+            type: slim
+            name: bootstrap/article-list-view

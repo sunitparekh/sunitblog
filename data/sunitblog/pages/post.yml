@@ -1,0 +1,75 @@
+---
+  meta: 
+    model: posts
+  areas:
+    -
+      name: header
+      modules:
+        - navigation
+    -
+      name: sidebar
+      modules: 
+        - author
+        - projects
+        - share-this
+        -
+          recipes: 
+            - 
+              type: soupcms-api
+              model: "/#{context.model_name}/slug/#{context.slug}"
+              return: toc-document
+            -
+              type: post-processor
+              processor: SoupCMS::Core::Processor::NokogiriTOC
+              config:
+                toc_for: "#{data['toc-document']['content']['value']}"
+                levels:
+                  - h2
+                  - h3
+                  - h4
+                  - h5
+                  - h6
+              return: table-of-content
+          template:
+            type: slim
+            name: bootstrap/table-of-content
+            config:
+              title: Contents
+        - tag-cloud
+        -
+          recipes:
+            -
+              type: soupcms-api
+              model: posts
+              fields: 
+                - title
+                - url
+                - slug
+              limit: 10
+              return: articles
+          template: 
+            type: slim
+            name: bootstrap/list-view
+            config: 
+              title: Recent Posts
+              all-link:
+                label: all posts >
+                link:
+                  url: /home
+    - 
+      name: body
+      modules: 
+        - 
+          recipes: 
+            - 
+              type: soupcms-api
+              model: "/#{context.model_name}/slug/#{context.slug}"
+              return: article
+          template: 
+            type: slim
+            name: bootstrap/article
+        - share-this
+        -
+          template: 
+            type: slim
+            name: meta/disqus

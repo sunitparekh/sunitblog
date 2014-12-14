@@ -1,0 +1,49 @@
+---
+  slug: vanilla-home
+  layout:
+    type: slim
+    name: bootstrap/vanilla
+  areas:
+    -
+      name: meta
+      modules:
+        -
+          template:
+            type: slim
+            name: meta/page-title
+    -
+      name: header
+      modules: []
+    -
+      name: sidebar
+      modules:
+        - author
+        - projects
+        - share-this
+        - tag-cloud
+        -
+          template:
+            type: slim
+            name: meta/analytics/google
+    -
+      name: body
+      modules:
+        -
+          recipes:
+            -
+              type: soupcms-api
+              model: posts
+              fields:
+                - title
+                - url
+                - slug
+                - description
+                - hero_image
+                - author_ref
+                - tags
+                - publish_datetime
+              limit: 0
+              return: articles
+          template:
+            type: slim
+            name: bootstrap/article-list-view

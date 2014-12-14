@@ -1,0 +1,24 @@
+---
+  slug: posts
+  title: Latest blog posts on sUnit blog space
+  seo:
+    description: Latest blog posts on sUnit blog space
+  layout:
+    type: slim
+    name: bootstrap/full-width
+  areas:
+    -
+      name: body
+      modules:
+        -
+          recipes:
+            -
+              type: soupcms-api
+              model: posts
+              match:
+                tags: "#{page.context.params['tags']}"
+              limit: 0
+              return: articles
+          template:
+            type: slim
+            name: bootstrap/article-tile-view

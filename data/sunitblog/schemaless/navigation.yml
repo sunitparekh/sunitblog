@@ -1,0 +1,28 @@
+---
+  doc_id: navigation
+
+  logo:
+    image:
+      url: "/assets/logo.svg"
+      html_options:
+        class: inline-svg
+    text: "sUnit blog"
+    link:
+      url: home
+
+  menu:
+
+    left:
+      -
+        label: "&nbsp;Latest posts"
+        link:
+          url: posts
+        font_icon: fa fa-comment-o fa-fw
+
+
+    right:
+      -
+        label: "&nbsp;About"
+        link:
+          url: about
+        font_icon: fa fa-user

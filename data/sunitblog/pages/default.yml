@@ -1,0 +1,56 @@
+---
+  meta:
+    name: enricher
+  layout:
+    type: slim
+    name: bootstrap/right-sidebar
+  areas:
+    -
+      name: meta
+      modules:
+        -
+          template:
+            type: slim
+            name: meta/page-title
+        -
+          template:
+            type: slim
+            name: meta/favicons
+    -
+      name: header
+      modules:
+        - navigation
+        -
+          recipes:
+            -
+              type: inline
+              data:
+                image: ref:images:images/nfr-wall.jpg
+              return: page-header
+          template:
+            type: slim
+            name: bootstrap/page-header
+    -
+      name: sidebar
+      modules:
+        - author
+        - projects
+        - tag-cloud
+    -
+      name: footer
+      modules:
+        -
+          recipes:
+            -
+              type: soupcms-api
+              model: schemaless
+              match:
+                doc_id: footer
+              return: footer
+          template:
+            type: slim
+            name: bootstrap/footer
+        -
+          template:
+            type: slim
+            name: meta/analytics/google

@@ -1,0 +1,35 @@
+/etc/init.d/nginx restart
+
+bundle exec puma -C puma.rb
+
+bundle exec pumactl -F puma.rb restart
+bundle exec pumactl -F puma.rb stop
+
+ps aux | grep -i puma | awk {'print $2'} | xargs kill -9
+
+tail -f /var/log/nginx/error.log
+tail -f /var/log/nginx/access.log
+
+tail -f /var/log/nginx/sunitblog-error.log
+tail -f /var/log/nginx/sunitblog-access.log
+
+tail -100f ~/sunitblog/log/sunitblog.stdout.log
+tail -100f ~/sunitblog/log/sunitblog.stderr.log
+
+
+ls -la /root/sunitblog/tmp/puma
+
+
+ps waux | grep puma
+ps waux | grep nginx
+
+
+sudo nano /etc/nginx/sites-available/me.sunitparekh.in
+sudo nano /etc/hosts
+
+bundle exec soupcms seed sunitblog
+
+watch -n 5 free -m
+
+
+
