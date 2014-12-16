@@ -123,8 +123,10 @@ Lets understand query in detail. Splunk support [unix style pipes in query](http
 4. `sort -count` sort in descending order on count
 5. `head 20` take first 20 from the result set
 
-[LogEntries](https://logentries.com/) is another feature rich SaaS solution on cloud. Other options are [Loogly](https://www.loggly.com/), [PaperTrail](https://papertrailapp.com/)
+[LogEntries](https://logentries.com/) is another feature rich SaaS solution on cloud. Other options are [Loogly](https://www.loggly.com/), [PaperTrail](https://papertrailapp.com/).
+
 [LogStash](http://www.elasticsearch.org/overview/logstash/) + [Elasticsearch](http://www.elasticsearch.org/overview/elasticsearch/) + [Kibana](http://www.elasticsearch.org/overview/kibana/) combination is best open-source one in this space.
+
 [GrayLog2](http://graylog2.org/), open-source log analytics solutions. Used with syslog to aggregate logs.
 
 Even though structured logging is quite useful on individual system. However until we have logs from all the system collected and indexed together, power of structured logging is under utilized. So lets look at what are different ways we can aggregate logs from multiple systems.
