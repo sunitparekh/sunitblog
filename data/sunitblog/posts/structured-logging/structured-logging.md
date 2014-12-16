@@ -1,8 +1,8 @@
 ---
 tags: [software-development, logging]
-title: Structured Logging
+title: Use structured logging for log search and analytics
 publish_datetime: 2014-09-06T00:00:07.0Z
-description: Logging is being followed in software development since long. Structured logging provides meaning to logs and helps not only just for debugging, but for reporting, monitoring and alerting, performance benchmarking and in analytics as well.
+description: Logging is being followed in software development since long. Structured logging provides meaning to logs and helps not only just for debugging, but for reporting, monitoring and alerting, performance benchmarking and with analytics as well.
 ---
 
 Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.
@@ -124,7 +124,8 @@ Lets understand query in detail. Splunk support [unix style pipes in query](http
 5. `head 20` take first 20 from the result set
 
 [LogEntries](https://logentries.com/) is another feature rich SaaS solution on cloud. Other options are [Loogly](https://www.loggly.com/), [PaperTrail](https://papertrailapp.com/)
-[GrayLog2](http://graylog2.org/), open-source log analytics solutions. Used with syslog to aggregate logs. [LogStash](http://logstash.net/) is another open-source one in this space.
+[LogStash](http://www.elasticsearch.org/overview/logstash/) + [Elasticsearch](http://www.elasticsearch.org/overview/elasticsearch/) + [Kibana](http://www.elasticsearch.org/overview/kibana/) combination is best open-source one in this space.
+[GrayLog2](http://graylog2.org/), open-source log analytics solutions. Used with syslog to aggregate logs.
 
 Even though structured logging is quite useful on individual system. However until we have logs from all the system collected and indexed together, power of structured logging is under utilized. So lets look at what are different ways we can aggregate logs from multiple systems.
 
