@@ -5,15 +5,12 @@ publish_datetime: 2014-05-27T00:00:07.0Z
 
 # About Me
 
-Polygot **Application Developer** from ThoughtWorks, India. Expertise in software development on Java, Ruby & Scala platforms. Specialized in developing complex enterprise applications and large-scale websites, with hands on experience . Along with solution architect expertise, I have been practicing and coaching, agile practices like TDD, Refactoring, Continuous Integration and Continuous Delivery. 
+## Application Developer
 
-Always eager to learn and pickup new technology and solve complex business problems using modern technology stacks. My recent experience on **Scala** platform with **Play Framework** with **mongoDB** has been amazing. Also we took responsive design to next level with implementing responsive images.
+Sunit is a polygot Application Developer from ThoughtWorks, India.  His experience includes using Java, Ruby and Scala to develop complex enterprise applications and large-scale websites. Apart from architecting solutions, he also helps coach clients on agile practices like TDD, Refactoring, Continuous Integration and Continuous Delivery.
 
-### Open-source projects
+He is passionate about learning new technologies and using them to solve complex business problems. He has contributed to 2 Open Source projects - **[Data Anonyization](http://sunitparekh.github.io/data-anonymization/)** a tool that builds anonymized production data to use for performance and security testing, debugging production issues and development purposes, and **[soupCMS](http://www.soupcms.com)** an unobtrusive and light-weight CMS framework build using Ruby.
 
-- **[Data Anonyization](http://sunitparekh.github.io/data-anonymization/)** tool helps to build anonymized production data dump to use for performance and security testing, debugging production issues and development purpose.
-- **[soupCMS](http://www.soupcms.com)** is unObtrusive & light-weight CMS framework building using Ruby.     
-   
 
 
 
