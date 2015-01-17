@@ -22,8 +22,9 @@ GIT
   specs:
     soupcms-common (0.5.0)
 
-PATH
-  remote: ../soupcms/soupcms-core
+GIT
+  remote: git://github.com/soupcms/soupcms-core.git
+  revision: 2bfd5268e5daa99bacabb1d11ddf985b3e967791
   specs:
     soupcms-core (0.5.0)
       bootstrap-sass
