@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/soupcms/soupcms-api.git
-  revision: 5ed88c388854dd9afc8d9ef19141ad36364bfcd6
+  revision: f732c0363cf5e411e9c468d1d4f4e6aa33ae8365
   specs:
     soupcms-api (0.5.0)
       bson_ext
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-cli.git
-  revision: 96d046382c094740194ed465f0531886a7130481
+  revision: 2122aee91e14a306e075b42ef711bf6e910a651c
   specs:
     soupcms-cli (0.5.4)
       bson_ext (~> 1.10)
@@ -18,13 +18,13 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-common.git
-  revision: 9561adbd27e8aaa28992d2f77514a196c2df4f2c
+  revision: 2fae436b8b68c9d1fcc9bb601869c8b8a838c90c
   specs:
     soupcms-common (0.5.0)
 
 GIT
   remote: git://github.com/soupcms/soupcms-core.git
-  revision: 1dcb0fca87a343bfe25c5f7bf4f81fe77d48265a
+  revision: 3d27d648b70121dc718e2fee75db27e53e8101be
   specs:
     soupcms-core (0.5.0)
       bootstrap-sass
@@ -35,7 +35,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    autoprefixer-rails (5.1.5)
+    autoprefixer-rails (5.1.7)
       execjs
       json
     aws_cf_signer (0.1.3)
@@ -56,16 +56,16 @@ GEM
     mini_portile (0.6.2)
     mongo (1.12.0)
       bson (= 1.12.0)
-    netrc (0.10.2)
+    netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    puma (2.11.0)
+    puma (2.11.1)
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
-    rest-client (1.7.2)
+    rest-client (1.7.3)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.4.11)
+    sass (3.4.12)
     slim (3.0.2)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
