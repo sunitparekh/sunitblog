@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.0'
+ruby '2.2.1'
 
 # gem 'soupcms-cli', path: '../soupcms/soupcms-cli'
 gem 'soupcms-cli', github: 'soupcms/soupcms-cli'
@@ -19,4 +19,3 @@ gem 'nokogiri'
 
 gem 'puma'
 gem 'mongo'
-gem 'bson_ext'

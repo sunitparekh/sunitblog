@@ -4,6 +4,8 @@ require 'sprockets'
 require 'soupcms/core'
 require 'soupcms/api'
 
+Mongo::Logger.logger.level = Logger::INFO
+
 ENV['CLOUDINARY_BASE_URL'] = '//res.cloudinary.com/sunitparekh/image/upload/'
 
 if ENV['RACK_ENV'] == 'production'
