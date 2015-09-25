@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.2.2'
 
 # gem 'soupcms-cli', path: '../soupcms/soupcms-cli'
 gem 'soupcms-cli', github: 'soupcms/soupcms-cli'
