@@ -6,27 +6,57 @@ description: Testing is key activity of every software development projects. How
 authors: ["ref:authors:sunitparekh"]
 ---
 
-Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I showcase few ideas/tools that I used in my projects for achieving email testing easily without any side effects.
+Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I showcase few ideas/tools that I used in my projects to achieve email testing with ease without any side effects.
 
-To test email effectively we end up using real email address, which leads to cluttering our mailbox with unwanted emails and for testing different scenarios we need multiple email address. And testing becomes more difficult when it requires checking mailbox of other users. Also we never like to send emails to real users, otherwise they gets confused with test emails and real emails.
+To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users. Also we never want to send emails to real users, otherwise they gets confused with test emails and real emails. Also we do not want to make any code modification for testing emails, this leads to code maintenance issues.
 
-To overcome above problems, what needed is, **Fake SMTP server (Email Service) which acts as outgoing server, however, it never sends email out to actual users and provides a user interface for tester to check and verify emails.** So application sends email to users however it never goes out of SMTP server.
+To overcome above problems, what we need is, **Fake SMTP server (Email Service) which acts as outgoing server, however, it never delivers email message to users and provides a user interface to check and verify all outgoing emails.** In short application sends email to users however it never goes out of SMTP server. 
    
-We need Fake SMTP server for following scenarios,
+We need Fake SMTP server for following different scenarios,
 
 ### Unit Testing
 
-Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests.
+Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests. [Dumbster](http://quintanasoft.com/dumbster/) is handy library here. Some frameworks like [Rails](http://guides.rubyonrails.org/testing.html#testing-your-mailers) has inbuilt support for unit testing emails.
+  
+```java
+public class TestEmail {
+
+    @Test
+    public void testSend() {
+        SimpleSmtpServer server = SimpleSmtpServer.start();
+
+        sendMessage("Subject", "Test Body", "abc@example.com");
+
+        server.stop();
+
+        assertThat(server.getReceivedEmailSize(),equalTo(1));
+
+        Iterator emails = server.getReceivedEmail();
+        SmtpMessage email = (SmtpMessage)emails.next();
+
+        assertThat(email.getHeaderValue("Subject"),equalTo("Subject"));
+        assertThat(email.getHeaderValue("To"),equalTo("abc@example.com"));
+        assertThat(email.getBody(),equalTo("Test Body"));
+    }
+}
+```  
 
 
 ### Local Developer Box Testing
 
 Local service with Standalone application for Developer Box testing, so after development developer/tester can verify emails locally.
 
-## Hosted Service
+### Hosted Service
 
 Hosted service with Web UI for Non-Production (QA, UAT, Staging) environments, which helps multiple tester to verify email functionality.
   
+  
+## Conclusion  
+
+Using tools and techniques stated above which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users, without cluttering mailboxes and without any person dependency to check mailbox.
+  
+Happy Testing !!!  
+
 
   
   
