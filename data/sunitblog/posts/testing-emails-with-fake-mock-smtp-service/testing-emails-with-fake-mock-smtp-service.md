@@ -18,7 +18,7 @@ We need Fake SMTP server for following different scenarios,
 
 Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests. [Dumbster](http://quintanasoft.com/dumbster/) is handy library here. Some frameworks like [Rails](http://guides.rubyonrails.org/testing.html#testing-your-mailers) has inbuilt support for unit testing emails.
   
-```java
+~~~java
 public class TestEmail {
 
     @Test
@@ -39,7 +39,7 @@ public class TestEmail {
         assertThat(email.getBody(),equalTo("Test Body"));
     }
 }
-```  
+~~~  
 
 
 ### Local Developer Box Testing
