@@ -13,7 +13,7 @@ To overcome above problems, what we need is, **Fake SMTP server (Email Service) 
    
 We need Fake SMTP server for following different scenarios,
 
-### 1. Unit Testing
+## 1. Unit Testing
 
 Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests. [Dumbster](http://quintanasoft.com/dumbster/) is handy library here. Some frameworks like [Rails](http://guides.rubyonrails.org/testing.html#testing-your-mailers) has inbuilt support for unit testing emails.
   
@@ -41,7 +41,7 @@ public class TestEmail {
 ~~~  
 
 
-### 2. Local Developer Box Testing
+## 2. Local Developer Box Testing
 
 Local SMTP service with standalone application for developer box testing. So after development developers/testers can verify emails functionality locally.
 
@@ -49,7 +49,7 @@ Local SMTP service with standalone application for developer box testing. So aft
 2.	[**Papercut**](https://github.com/jaben/papercut) – Windows only solution. Better UI than FakeSMTP but requires installation
 
 
-### 3. Hosted Service
+## 3. Hosted Service
 
 Hosted service with Web UI for Non-Production (QA, UAT, Staging) environments, which helps multiple tester to verify email functionality.
   
@@ -62,7 +62,7 @@ Hosted service with Web UI for Non-Production (QA, UAT, Staging) environments, w
 
 Using tools and techniques which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users. Above solutions doesn't require any change in production code for testing, just needs different configuration of SMTP server. 
   
-Happy Testing !!!  
+Happy Testing  
 
 
   
