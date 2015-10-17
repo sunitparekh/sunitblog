@@ -1,7 +1,7 @@
 ---
 tags: [agile, testing]
 title: Testing emails with Fake/Mock SMTP service
-publish_datetime: 2016-10-31T00:00:07.0Z
+publish_datetime: 2015-10-17T00:00:07.0Z
 description: Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I showcase few ideas/tools that I used in my projects for achieving email testing easily without any side effects.
 authors: ["ref:authors:sunitparekh"]
 ---
