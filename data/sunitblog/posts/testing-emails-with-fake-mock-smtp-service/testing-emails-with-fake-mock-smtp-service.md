@@ -49,15 +49,12 @@ Local SMTP service with standalone application for developer box testing. So aft
 2.	[**Papercut**](https://github.com/jaben/papercut) – Windows only solution. Better UI than FakeSMTP but requires installation
 
 
-## 3. Hosted Service
+  
+## Conclusion  
 
-Hosted service with Web UI for Non-Production (QA, UAT, Staging) environments, which helps multiple tester to verify email functionality.
+Using tools and techniques which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users. Above solutions doesn't require any change in production code for testing, just needs different configuration of SMTP server. 
   
-1.	[**Mailcatcher**](http://mailcatcher.me/) It has a web view which allows viewing messages from anywhere, ruby application that can runs independently.
-2.	[**Mailtrap.io**](https://mailtrap.io) Cloud based SaaS solution, very sophisticated but paid. 
-  
-![mailcatcher.me](ref:images:posts/testing-emails-with-fake-mock-smtp-service/testing-emails-with-fake-mock-smtp-service.png)
-  
+Happy Testing !!!
 
 
   
