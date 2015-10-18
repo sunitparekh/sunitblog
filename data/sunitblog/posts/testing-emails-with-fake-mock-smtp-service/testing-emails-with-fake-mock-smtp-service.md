@@ -41,6 +41,24 @@ public class TestEmail {
 ~~~  
 
 
+## 2. Local Developer Box Testing
+
+Local SMTP service with standalone application for developer box testing. So after development developers/testers can verify emails functionality locally.
+
+1.	[**FakeSMTP**](https://nilhcem.github.io/FakeSMTP/) – No installation required. Just run a simple JAR file. Works on any platform.
+2.	[**Papercut**](https://github.com/jaben/papercut) – Windows only solution. Better UI than FakeSMTP but requires installation
+
+
+## 3. Hosted Service
+
+Hosted service with Web UI for Non-Production (QA, UAT, Staging) environments, which helps multiple tester to verify email functionality.
+  
+1.	[**Mailcatcher**](http://mailcatcher.me/) It has a web view which allows viewing messages from anywhere, ruby application that can runs independently.
+2.	[**Mailtrap.io**](https://mailtrap.io) Cloud based SaaS solution, very sophisticated but paid. 
+  
+![mailcatcher.me](ref:images:posts/testing-emails-with-fake-mock-smtp-service/testing-emails-with-fake-mock-smtp-service.png)
+  
+
 
   
   
