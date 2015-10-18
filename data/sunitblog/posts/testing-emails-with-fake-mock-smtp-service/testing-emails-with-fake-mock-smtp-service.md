@@ -11,6 +11,35 @@ To test emails effectively we end up using real email addresses, which leads to 
 
 To overcome above problems, what we need is, **Fake SMTP server (Email Service) which acts as outgoing server, however, it never delivers email message to users and provides a user interface to check and verify all outgoing emails.** In short application sends email to users however it never goes out of SMTP server. 
    
+We need Fake SMTP server for following different scenarios,
+
+## 1. Unit Testing
+
+Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests. [Dumbster](http://quintanasoft.com/dumbster/) is handy library here. Some frameworks like [Rails](http://guides.rubyonrails.org/testing.html#testing-your-mailers) has inbuilt support for unit testing emails.
+  
+~~~java
+public class TestEmail {
+
+    @Test
+    public void testSend() {
+        SimpleSmtpServer server = SimpleSmtpServer.start();
+
+        sendMessage("Subject", "Test Body", "abc@example.com");
+
+        server.stop();
+
+        assertThat(server.getReceivedEmailSize(),equalTo(1));
+
+        Iterator emails = server.getReceivedEmail();
+        SmtpMessage email = (SmtpMessage)emails.next();
+
+        assertThat(email.getHeaderValue("Subject"),equalTo("Subject"));
+        assertThat(email.getHeaderValue("To"),equalTo("abc@example.com"));
+        assertThat(email.getBody(),equalTo("Test Body"));
+    }
+}
+~~~  
+
 
 
   
