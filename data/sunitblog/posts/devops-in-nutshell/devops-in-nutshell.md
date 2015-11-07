@@ -16,23 +16,27 @@ To understand DevOps better, lets first put down how it is done in today's world
 5. Attach special storage such as SAN or SSD drive to OS 
 6. Implement network topology
 7. Implement security measures such as setup firewalls etc 
-8. Install required software on each servers 
+8. Install required software on each servers e.g JDK, Application Servers like WAS, setup database cluster 
 9. Configure installed software e.g. Load balancer, Database cluster, HTTP server etc
 10. Configure required application settings such as property files etc.
 11. Deploy application 
 
-Also note in above steps there are multiple teams involved in above steps (minimum 5 teams). On top of that all steps are done manually and required **tickets to be raised which goes to approval process for days**. There are plenty of challenges in above process and team setup. 
+In above steps there are multiple teams involved to achieve above steps. On top of that all steps are done manually and requires **tickets to be raised which goes to approval process for days**. There are plenty of challenges with manual process and team setup. Also first steps which are just documentation takes most of the time to make sure everyone in organisation is aligned. 
 
-First lets understand the overall DevOps space and later I will share some tips and team structure that worked for me in past. 
+First lets understand the overall DevOps space along with some tips and team structure that worked for me in past. 
 
 To understand DevOps lets divide it into 3 parts,
 1. Infrastructure Provisioning
-2. Server Provisioning
+2. OS Provisioning
+2. Software Provisioning
 3. Application Provisioning
 
-**Infrastructure Provisioning** is all about setting up vanilla server with network topology, security setup... in above list takes care of step 1 to 7. 
+**Infrastructure Provisioning** is all about setting up vanilla server with network topology, security setup... step 1 to 7 in above list. 
 
 Tools like [AWS CloudFormation](http://aws.amazon.com/cloudformation/), [Terraform](https://www.terraform.io/) supports infrastructure setup.
+
+Docker virtual server image serves OS, Software and Applicaiton prvisionig together.. 
+
 
 
 
