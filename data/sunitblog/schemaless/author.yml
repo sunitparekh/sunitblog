@@ -1,11 +1,11 @@
 ---
   doc_id: author
 
-  name: <a href="http://www.sunitparekh.in">Sunit Parekh</a>
+  name: <a href="http://www.sunitparekh.in/about">Sunit Parekh</a>
 
   bio:
     - Application Developer
-    - ThoughtWorks
+    - <a href="https://www.linkedin.com/company/citi?trk=mini-profile">Citicorp Services (CSIL)</a>
     - Pune, India
 
   projects:
