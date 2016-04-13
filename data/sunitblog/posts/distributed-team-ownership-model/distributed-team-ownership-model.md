@@ -2,7 +2,7 @@
 tags: [software-development, distributed-teams]
 title: Ownership model for distributed team
 publish_datetime: 2016-04-13T00:00:07.0Z
-description: In distributed teams it is very important that each team operates in complete autonomy. And there is need for team to be independent and takes ownership. However, everyone has different views and understanding of ownership. Here is what worked for me in terms of distributed team and clear definition of ownership across teams.    
+description: In distributed teams it is very important that each team operates in complete autonomy. And there is need for team to be independent and takes ownership. However, everyone has different views and understanding of ownership. Here is what worked for me in terms of distributed team and clear definition of ownership across teams.
 authors: ["ref:authors:sunitparekh"]
 ---
 
