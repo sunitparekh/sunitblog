@@ -32,9 +32,9 @@ Let's start with first understanding different aspects of ownership. Software de
 
 Lets take example of retail business and see two classical distributed team models,
 
-**Vertical/Feature based full ownership team model**: setup teams with all roles to take up full ownership of feature. E.g. Product Catalog team, Order management team, Shipping management team. Each team has full autonomy to operate from business decision to technology choices made in respective area. 
+**Vertical (Feature) based full ownership team model**: setup teams with all roles to take up full ownership of feature. E.g. Product Catalog team, Order management team, Shipping management team. Each team has full autonomy to operate from business decision to technology choices made in respective area. 
 
-**Horizontal/Competency based ownership team model**: Front end web team, Mobile team, API team, Operations team, … each team has specific role to play and take ownership of each area specifically technical and solution ownership. 
+**Horizontal (Competency) based ownership team model**: Front end web team, Mobile team, API team, Operations team... each team has specific role to play and take ownership of each area specifically technical and solution ownership. 
 
 ![Horizontal/Competency based Distributed Team Model](ref:images:posts/distributed-team-ownership-model/distributed-team.png "Horizontal/Competency based Distributed Team Model")
 {: .center}
