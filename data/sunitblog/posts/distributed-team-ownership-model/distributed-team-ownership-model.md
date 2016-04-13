@@ -1,29 +1,46 @@
 ---
 tags: [software-development, distributed-teams]
 title: Ownership model for distributed team
-publish_datetime: 2016-10-31T00:00:07.0Z
-description: In distributed teams it is very important that each team operates in complete autonomy. And there is need for team to be independent and takes ownership. However, everyone has different views and understanding of ownership. I like to define ownership with 3 aspects which can help to build common understanding of ownership and eventually help team taking more ownership.   
+publish_datetime: 2016-04-13T00:00:07.0Z
+description: In distributed teams it is very important that each team operates in complete autonomy. And there is need for team to be independent and takes ownership. However, everyone has different views and understanding of ownership. Here is what worked for me in terms of distributed team and clear definition of ownership across teams.    
 authors: ["ref:authors:sunitparekh"]
 ---
 
-Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy. And there is need for team to be independent and takes ownership. However, everyone has different views and understanding of ownership. I like to define ownership with 3 aspects which can help to build common understanding of ownership and eventually help team taking more ownership.   
+Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.   
 
-To answer all of above let's first define, what is ownership and different aspect of ownership. In software development I like to define ownership as 3 pillars - technical, solution and business. Let me elaborate,
+Let's start with first understanding different aspects of ownership. Software development ownership can be viewed as three types **technical**, **solution** and **business**. 
 
-![3 Pillars of Ownership for Distributed Teams](ref:images:posts/distributed-team-ownership-model/distributed-team-ownership-model-original.svg "3 Pillars of Ownership for Distributed Teams")
+![3 Types of Ownership for Distributed Teams](ref:images:posts/distributed-team-ownership-model/distributed-team-ownership-model.png "3 Types of Ownership for Distributed Teams")
 {: .center}
  
  
-1. **Technical ownership** means delivering quality code by following engineering practices such as coding, refactoring, continuous integration, build and deployment etc. along with full autonomy is in my view is technical ownership. Technical ownership also includes owning technical decisions including architecture and design patterns for software development. 
- 
-2. **Solution ownership** is about providing solutions to solve business problems. e.g. a) for retail website building recommendation engine based on what use is looking for, b) to achieve mobile first build UX/UI with responsive web design approach. Solution also involves how we can deliver the feature e.g. define MVP and roll out as first cut to end users and with each release keep enhancing the feature as needed. This approach is also known as lean software development which required better project planning and tracking skills.  
- 
-3. **Business ownership** involves working closely with business in defining business needs and helping in building solution to solve the problem. e.g. on retail website defining the reward scheme and to promote mobile applications give more reward.  
+1. **Technical ownership** means delivering quality product (code) by following engineering practices such as unit testing, refactoring, continuous integration, automated build and deployment etc. with full autonomy. Technical ownership also includes owning technical decisions at low level including following design patterns, cleaner API development for software development. 
 
-In my view each of above can have maturity levels within. In **technical ownership** delivering good quality code could be the first step and reaching continuous delivery with automated build and deployment could be the highest maturity level. For **solution ownership** deciding appropriate technology to solve the problem is first and coming up with full plan on how to deliver the solution is highest level of maturity. The most tricky one is **business ownership** where it is very difficult to define what is expected. However, best way to judge is, Is business calling you to discuss and define requirements. If yes, you are there. 
+In *technical ownership* delivering quality code could be the first step and reaching continuous delivery with automated build and deployment could be the higher level of maturity.
  
-Now, it is important to understand, what is expected as well as what is desired by the team. In distributed team, team should have specific roles to achieve each type of ownership. Developers, QAs and BAs can help achieve Technical ownership. However, without Tech Leads and Project/Program Managers is is difficult to achieve Solution leadership. Similarly we need Product Owners and Senior BAs to achieve Business ownership. *So it is important for the stakeholders to setup team based on what is expected from the team.*  
- 
-Each type of ownership pillars are independent form each other. Each type of ownership can be achieved individually based on what is desired and expected from the team. And team can have different maturity level in different ownership pillars. Also to make team fully autonomous and independent, all of 3 pillars are important. 
+2. **Solution ownership** is about providing solutions to solve business problems. e.g. a) for retail website building recommendation engine based on what a user is searching for, b) to achieve mobile first build UX/UI with responsive web design approach. Solution also involves how we can deliver the feature e.g. define MVP and roll out as first cut to end users and with each release keep enhancing the feature as needed. 
 
-Please share your experience in comments below.  
+For *solution ownership* deciding appropriate technology to solve the problem (using ElasticSearch for free text search) is first and making tech stack, frameworks and architecture decisions and delivering it (Java vs .NET, microservice architecture, NoSQL datastore), is higher level of maturity 
+ 
+3. **Business ownership** involves working closely with business in defining business needs and helps in building digital solution to solve the problem. e.g. on retail website defining the reward scheme and to promote mobile applications give more reward. Plays partner role with business owners and gets involved in defining long term business strategies as well.  
+
+The most tricky one is *business ownership* where it is very difficult to define what is expected. One way to detect this maybe how early do you get involved in the discussion. Do you get to define the requirement, and identify the problem or does get involved only after the requirement and likely solution have been decided. 
+ 
+#### Lets take example of retail business and see two classical distributed team models,
+
+**Vertical/Feature based full ownership team model**: setup teams with all roles to take up full ownership of feature. E.g. Product Catalog team, Order management team, Shipping management team. Each team has full autonomy to operate from business decision to technology choices made in respective area. 
+
+**Horizontal/Competency based ownership team model**: Front end web team, Mobile team, API team, Operations team, … each team has specific role to play and take ownership of each area specifically technical and solution ownership. 
+
+![Horizontal/Competency based Distributed Team Model](ref:images:posts/distributed-team-ownership-model/distributed-team.png "Horizontal/Competency based Distributed Team Model")
+{: .center}
+
+Feature based full ownership team is what I think better for ownership and accountability. However, I have see more horizontal/competency based ownership model in practice. In my view having clarify with all members about the team model is more important and choose whatever works for you.  
+
+### Each type of ownership needs specific roles in each location
+
+It is important to understand, what is expected from the team and capability &amp; strength of each team? Above becomes less relevant when team is co-located since everyone is within walk and talk reach. And it becomes more relevant in distributed team, each team requires specific roles to achieve each type of ownership. 
+
+1. Developers, QAs and BAs can help achieve Technical ownership. 
+2. We need tech leadership to provide architecture solution along with supporting roles like project management for execution and planning. 
+3. Similarly we need Product Owners and Senior BAs to achieve Business ownership. 
