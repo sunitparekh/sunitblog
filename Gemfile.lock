@@ -1,13 +1,13 @@
 GIT
   remote: git://github.com/soupcms/soupcms-api.git
-  revision: 5fe0b676a90563639454dc275f6f2c651ccd33e9
+  revision: a48320f3a8587b1681a1481e261d37d24fb3901e
   specs:
     soupcms-api (0.5.0)
       mongo
 
 GIT
   remote: git://github.com/soupcms/soupcms-cli.git
-  revision: 968dc3ba6081800eca786d1c52bea03f3bdd3210
+  revision: 33e76a3aa3865d5331c727ab7db7de40d0a65e25
   specs:
     soupcms-cli (0.5.4)
       cloudinary
@@ -16,13 +16,13 @@ GIT
 
 GIT
   remote: git://github.com/soupcms/soupcms-common.git
-  revision: aca1c2cd5b6051e27ca2794a0ac696477913fafe
+  revision: c5473df6fdb8ad5ee9112fb340a08bc10b73379b
   specs:
     soupcms-common (0.5.0)
 
 GIT
   remote: git://github.com/soupcms/soupcms-core.git
-  revision: 81d0ae712163cd9d44ea64b38dab7d2662be87eb
+  revision: 9e08e357964a62cbd9e9664d1f6fd4d580974f8d
   specs:
     soupcms-core (0.5.0)
       bootstrap-sass
@@ -33,30 +33,30 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    autoprefixer-rails (6.3.6)
+    autoprefixer-rails (6.3.6.1)
       execjs
     aws_cf_signer (0.1.3)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    bson (4.0.4)
-    cloudinary (1.1.5)
+    bson (4.1.1)
+    cloudinary (1.1.6)
       aws_cf_signer
       rest-client
     coderay (1.1.1)
-    concurrent-ruby (1.0.1)
+    concurrent-ruby (1.0.2)
     domain_name (0.5.20160310)
       unf (>= 0.0.5, < 1.0.0)
     execjs (2.6.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    kramdown (1.10.0)
+    kramdown (1.11.1)
     mime-types (2.99.1)
     mini_portile2 (2.0.0)
-    mongo (2.2.4)
+    mongo (2.2.5)
       bson (~> 4.0)
     netrc (0.11.0)
-    nokogiri (1.6.7.1)
+    nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     puma (3.4.0)
     rack (1.6.4)
@@ -73,7 +73,7 @@ GEM
       rack (> 1, < 3)
     temple (0.7.6)
     thor (0.19.1)
-    tilt (2.0.2)
+    tilt (2.0.4)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
@@ -92,5 +92,8 @@ DEPENDENCIES
   soupcms-common!
   soupcms-core!
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.11.2
+   1.12.4
