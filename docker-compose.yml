@@ -1,0 +1,11 @@
+soupcms:
+    image: sunitparekh/soupcms
+    ports:
+        - "9292"
+    links:
+        - mongodb
+
+mongodb:
+    image: mongo
+    ports:
+        - "27017"
