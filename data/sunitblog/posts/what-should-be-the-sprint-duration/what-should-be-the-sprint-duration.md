@@ -41,10 +41,10 @@ When the team is new to agile practices, initial time gets spent in learning agi
 
 The above factors help in defining the Sprint cycle and help deliver sizeable number of features to production considering distributed team overheads. Balancing pure development effort vs. all other non-development effort is the key here, otherwise the team will deliver lesser features against effort spent on non-development activities.
 
-In my view, for co-located teams or 2 location distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.
+> In my view, for co-located teams or distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.
 
 Philosophy of “shorter sprints are better” is not always right. Sometimes with shorter sprints and significant non-development effort, team’s stress level increases while stakeholder sees less deliverable, watch-out for such cases. 
 
 ## Real-life project example
 
-On one of my project initially after project inception with distributed team in 4 location (US West Coast, Brussels, London, India) we started with 4 week sprint. Our go-live was after 8 sprints (almost 7 months) and after that we moved to 3 week sprint and every 2 sprint release to production. We kept release every 2 sprint till we smooth out overall processes with multiple team having minimum overheads. After six months team re-visited release duration, and moved to releasing to production every sprint i.e. 3 weeks. However sprint duration was kept at 3 week only so release has some meaty features in it. 
+> On one of my project initially after project inception with distributed team in 4 location (US West Coast, Brussels, London, India) we started with 4 week sprint. Our go-live was after 8 sprints (almost 7 months) and after that we moved to 3 week sprint and every 2 sprint release to production. We kept release every 2 sprint till we smooth out overall processes with multiple team having minimum overheads. After six months team re-visited release duration, and moved to releasing to production every sprint i.e. 3 weeks. However sprint duration was kept at 3 week only so release has some meaty features in it. 
