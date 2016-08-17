@@ -22,13 +22,13 @@ Nowadays it is quite common to have a distributed team. Number of locations incl
 
 ### Story Size (E2E elapsed time):
 
-Every story that is part of the Sprint should be completed end 2 end from low level design to development and testing within the Sprint. A simple rule is  that the largest sized story should fit within a Sprint. E.g. if my largest and most complex story takes 2-3 elapsed days for design,  6-8 elapsed days for development and 3-4 elapsed days for testing, then having a 2 weeks cycle of is NOT ideal. This is a very important aspect to consider if one would like to deliver meaty features to users every sprint/release. Either figure out creative ways to fir stories within sprints, or, as a last resort, increase the length of your sprint.
+Every story that is part of the Sprint should be completed end 2 end from low level design to development and testing within the Sprint. A simple rule is  that the largest sized story should fit within a Sprint. E.g. if my largest and most complex story takes 2-3 elapsed days for design,  6-8 elapsed days for development and 3-4 elapsed days for testing, then having a 2 weeks cycle of is NOT ideal. This is a very important aspect to consider if one would like to deliver meaty features to users every sprint. Either figure out creative ways to fit stories within sprint, or, as a last resort, increase the length of your sprint.
 
 ### Regression testing effort and size: 
 
 For frequent releases and continuous delivery, it is very important to have shorter testing cycles. Automation is a key, starting from unit testing till end2end functional testing, performance testing, capacity testing and security testing - everything should be automated in an optimal manner. Shorter the full testing cycle, shorter the Sprint length. Read more about testing automation [here](https://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests)
 
-### Release signoff and deployment process: 
+### Release sign-off and deployment process: 
 
 This factor is very important in deciding the duration of the Sprint cycle as well. In large organisations regular releases are scheduled during weekends (off hours) and done by independent teams (release management and infrastructure team). Also the process of reserving the release slot needs multiple level of approval with all the details and testing evidences attached. Now all these processes with these teams distributed across time zones makes releases more complicated and lengthy even though we have a fully automated deployment using CI/CD infrastructure in place. So effort and time for the release signoff and deployment process directly impacts the Sprint duration. Read more about CI/CD [here](http://www.slideshare.net/gsluthra/recipes-for-continuous-delivery)
 
@@ -43,7 +43,7 @@ The above factors help in defining the Sprint cycle and help deliver sizeable nu
 
 > In my view, for co-located teams or distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.
 
-Philosophy of “shorter sprints are better” is not always right. Sometimes with shorter sprints and significant non-development effort, team’s stress level increases while stakeholder sees less deliverable, watch-out for such cases. 
+Philosophy of "shorter sprints are better" is not always right. Sometimes with shorter sprints and significant non-development effort, team's stress level increases while stakeholder sees less deliverable, watch-out for such cases. 
 
 ## Real-life project example
 
