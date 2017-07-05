@@ -5,17 +5,14 @@
 
   bio:
     - Application Developer
-    - <a href="https://www.linkedin.com/company/citi?trk=mini-profile">Citicorp Services (CSIL)</a>
-    - (ex ThoughtWorks, Kanbay, Wipro)
+    - <a href="https://www.thoughtworks.com/profiles/sunit-parekh">ThoughtWorks</a>
+    - (ex Citi, Capgemini, Wipro)
     - Pune, India
 
   projects:
     -
      url: http://sunitparekh.github.io/data-anonymization/
      title: Data Anonymization
-    -
-     url: http://www.soupcms.com
-     title: soupCMS
 
   thumbnail: http://www.gravatar.com/avatar/f40c60ffb60255ae89e75ccbb8eb303c.png
 
